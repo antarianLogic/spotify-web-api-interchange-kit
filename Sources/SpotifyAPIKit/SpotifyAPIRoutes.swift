@@ -21,11 +21,37 @@ public enum SpotifyAPIRoutes {
 
     public static func getAlbum(withID id: String,
                                 cacheInterval: TimeInterval? = nil,
-                                timeoutInterval: TimeInterval? = nil) -> RESTResource<SpotifyAlbum> {
+                                timeoutInterval: TimeInterval? = nil) -> RESTResource<SpAlbum> {
         return RESTResource(path: "/albums/\(id.lowercased())",
                             headers: headers,
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
                             cacheInterval: cacheInterval,
+                            timeoutInterval: timeoutInterval)
+    }
+
+    public static func getTrack(withID id: String,
+                                cacheInterval: TimeInterval? = nil,
+                                timeoutInterval: TimeInterval? = nil) -> RESTResource<SpTrack> {
+        return RESTResource(path: "/tracks/\(id.lowercased())",
+                            headers: headers,
+                            queryParameters: [URLQueryItem(name: "market", value: "us")],
+                            cacheInterval: cacheInterval,
+                            timeoutInterval: timeoutInterval)
+    }
+
+    public static func search(withQuery query: String,
+                              types: [String],
+                              resultLimit: UInt = 100,
+                              offset: UInt = 0,
+                              timeoutInterval: TimeInterval? = nil) -> RESTResource<SpSearchResults> {
+        let typesString = types.joined(separator: ",")
+        return RESTResource(path: "/search",
+                            headers: headers,
+                            queryParameters: [URLQueryItem(name: "q", value: query),
+                                              URLQueryItem(name: "type", value: typesString),
+                                              URLQueryItem(name: "market", value: "us")],
+                            pageSizeQueryItem: URLQueryItem(name: "limit", value: String(resultLimit)),
+                            offsetQueryItem: URLQueryItem(name: "offset", value: String(offset)),
                             timeoutInterval: timeoutInterval)
     }
 

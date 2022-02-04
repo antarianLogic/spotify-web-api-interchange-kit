@@ -41,4 +41,36 @@ final class SpotifyAPIRoutesTests: XCTestCase {
         XCTAssertEqual(resource.cacheInterval, 3600)
         XCTAssertEqual(resource.timeoutInterval, 30)
     }
+
+    func testGetTrack() {
+        SpotifyAPIRoutes.accessToken = "NgCXRKMzYjw"
+        let resource = SpotifyAPIRoutes.getTrack(withID: "Bcde2345", cacheInterval: 3600, timeoutInterval: 40)
+        XCTAssertEqual(resource.path, "/tracks/bcde2345")
+        XCTAssertEqual(resource.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
+                                          "Content-Type": "application/json"])
+        XCTAssertEqual(resource.queryParameters, [URLQueryItem(name: "market", value: "us")])
+        XCTAssertNil(resource.pageSizeQueryItem)
+        XCTAssertNil(resource.offsetQueryItem)
+        XCTAssertNil(resource.pageQueryItem)
+        XCTAssertNil(resource.model)
+        XCTAssertEqual(resource.cacheInterval, 3600)
+        XCTAssertEqual(resource.timeoutInterval, 40)
+    }
+
+    func testSearch() {
+        SpotifyAPIRoutes.accessToken = "NgCXRKMzYjw"
+        let resource = SpotifyAPIRoutes.search(withQuery: "upc: 1234", types: ["album"], resultLimit: 10, offset: 2, timeoutInterval: 50)
+        XCTAssertEqual(resource.path, "/search")
+        XCTAssertEqual(resource.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
+                                          "Content-Type": "application/json"])
+        XCTAssertEqual(resource.queryParameters, [URLQueryItem(name: "q", value: "upc: 1234"),
+                                                  URLQueryItem(name: "type", value: "album"),
+                                                  URLQueryItem(name: "market", value: "us")])
+        XCTAssertEqual(resource.pageSizeQueryItem, URLQueryItem(name: "limit", value: "10"))
+        XCTAssertEqual(resource.offsetQueryItem, URLQueryItem(name: "offset", value: "2"))
+        XCTAssertNil(resource.pageQueryItem)
+        XCTAssertNil(resource.model)
+        XCTAssertNil(resource.cacheInterval)
+        XCTAssertEqual(resource.timeoutInterval, 50)
+    }
 }
