@@ -21,7 +21,7 @@ public enum SpotifyAPIRoutes {
 
     public static func getAlbum(withID id: String,
                                 cacheInterval: TimeInterval? = nil,
-                                timeoutInterval: TimeInterval? = nil) -> RESTResource<SpAlbum> {
+                                timeoutInterval: TimeInterval? = nil) -> RESTResource<SAKAlbum> {
         return RESTResource(path: "/albums/\(id.lowercased())",
                             headers: headers,
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
@@ -31,7 +31,7 @@ public enum SpotifyAPIRoutes {
 
     public static func getTrack(withID id: String,
                                 cacheInterval: TimeInterval? = nil,
-                                timeoutInterval: TimeInterval? = nil) -> RESTResource<SpTrack> {
+                                timeoutInterval: TimeInterval? = nil) -> RESTResource<SAKTrack> {
         return RESTResource(path: "/tracks/\(id.lowercased())",
                             headers: headers,
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
@@ -43,7 +43,7 @@ public enum SpotifyAPIRoutes {
                               types: [String],
                               resultLimit: UInt = 100,
                               offset: UInt = 0,
-                              timeoutInterval: TimeInterval? = nil) -> RESTResource<SpSearchResults> {
+                              timeoutInterval: TimeInterval? = nil) -> RESTResource<SAKSearchResults> {
         let typesString = types.joined(separator: ",")
         return RESTResource(path: "/search",
                             headers: headers,

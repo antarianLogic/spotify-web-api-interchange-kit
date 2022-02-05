@@ -1,5 +1,5 @@
 //
-//  SpImage.swift
+//  SAKImage.swift
 //  SpotifyAPIKit
 //
 //  Created by Carl Sheppard on 2/3/22.
@@ -8,7 +8,7 @@
 
 import RESTWebService
 
-public struct SpImage: Codable, Equatable {
+public struct SAKImage: Codable, Equatable {
 
     public let url: String
 
@@ -25,7 +25,7 @@ public struct SpImage: Codable, Equatable {
     }
 }
 
-extension SpImage: Identifiable {
+extension SAKImage: Identifiable {
 
     public var id: String { url }
 }

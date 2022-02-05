@@ -1,5 +1,5 @@
 //
-//  SpTrack.swift
+//  SAKTrack.swift
 //  SpotifyAPIKit
 //
 //  Created by Carl Sheppard on 2/3/22.
@@ -8,7 +8,7 @@
 
 import RESTWebService
 
-public struct SpTrack: Codable, Identifiable, Equatable {
+public struct SAKTrack: Codable, Identifiable, Equatable {
 
     public let id: String
 
@@ -28,9 +28,9 @@ public struct SpTrack: Codable, Identifiable, Equatable {
 
     public let previewURL: String
 
-    public let album: SpAlbum
+    public let album: SAKAlbum
 
-    public let artists: [SpArtist]
+    public let artists: [SAKArtist]
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -55,8 +55,8 @@ public struct SpTrack: Codable, Identifiable, Equatable {
                 href: String,
                 popularity: Int,
                 previewURL: String,
-                album: SpAlbum,
-                artists: [SpArtist]) {
+                album: SAKAlbum,
+                artists: [SAKArtist]) {
         self.id = id
         self.uri = uri
         self.name = name

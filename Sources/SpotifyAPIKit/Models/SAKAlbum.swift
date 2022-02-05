@@ -1,5 +1,5 @@
 //
-//  SpAlbum.swift
+//  SAKAlbum.swift
 //  SpotifyAPIKit
 //
 //  Created by Carl Sheppard on 2/3/22.
@@ -8,7 +8,7 @@
 
 import RESTWebService
 
-public struct SpAlbum: Codable, Identifiable, Equatable {
+public struct SAKAlbum: Codable, Identifiable, Equatable {
 
     public let id: String
 
@@ -24,11 +24,11 @@ public struct SpAlbum: Codable, Identifiable, Equatable {
 
     public let releaseDate: String
 
-    public let images: [SpImage]
+    public let images: [SAKImage]
 
-    public let artists: [SpArtist]
+    public let artists: [SAKArtist]
 
-    public let tracks: SpCollection<SpTrack>
+    public let tracks: SAKCollection<SAKTrack>
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -50,9 +50,9 @@ public struct SpAlbum: Codable, Identifiable, Equatable {
                 totalTracks: Int,
                 href: String,
                 releaseDate: String,
-                images: [SpImage],
-                artists: [SpArtist],
-                tracks: SpCollection<SpTrack>) {
+                images: [SAKImage],
+                artists: [SAKArtist],
+                tracks: SAKCollection<SAKTrack>) {
         self.id = id
         self.uri = uri
         self.name = name

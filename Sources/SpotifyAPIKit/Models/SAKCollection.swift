@@ -1,5 +1,5 @@
 //
-//  SpCollection.swift
+//  SAKCollection.swift
 //  SpotifyAPIKit
 //
 //  Created by Carl Sheppard on 2/3/22.
@@ -8,7 +8,7 @@
 
 import RESTWebService
 
-public struct SpCollection<SpObj>: Codable, Equatable where SpObj: Codable & Identifiable & Equatable {
+public struct SAKCollection<SpObj>: Codable, Equatable where SpObj: Codable & Identifiable & Equatable {
 
     public let total: Int
 

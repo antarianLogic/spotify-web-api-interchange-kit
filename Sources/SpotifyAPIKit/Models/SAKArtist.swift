@@ -1,5 +1,5 @@
 //
-//  SpArtist.swift
+//  SAKArtist.swift
 //  SpotifyAPIKit
 //
 //  Created by Carl Sheppard on 2/4/22.
@@ -8,7 +8,7 @@
 
 import RESTWebService
 
-public struct SpArtist: Codable, Identifiable, Equatable {
+public struct SAKArtist: Codable, Identifiable, Equatable {
 
     public let id: String
 
