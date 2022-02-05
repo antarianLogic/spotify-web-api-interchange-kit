@@ -16,11 +16,19 @@ public struct SAKArtist: Codable, Identifiable, Equatable {
 
     public let name: String
 
+    public let popularity: Int
+
+    public let images: [SAKImage]
+
     public init(id: String,
                 uri: String,
-                name: String) {
+                name: String,
+                popularity: Int,
+                images: [SAKImage]) {
         self.id = id
         self.uri = uri
         self.name = name
+        self.popularity = popularity
+        self.images = images
     }
 }

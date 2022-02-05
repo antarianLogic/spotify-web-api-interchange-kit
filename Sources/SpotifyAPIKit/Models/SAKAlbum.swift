@@ -20,8 +20,6 @@ public struct SAKAlbum: Codable, Identifiable, Equatable {
 
     public let totalTracks: Int
 
-    public let href: String
-
     public let releaseDate: String
 
     public let images: [SAKImage]
@@ -36,7 +34,6 @@ public struct SAKAlbum: Codable, Identifiable, Equatable {
         case name
         case albumType = "album_type"
         case totalTracks = "total_tracks"
-        case href
         case releaseDate = "release_date"
         case images
         case artists
@@ -48,7 +45,6 @@ public struct SAKAlbum: Codable, Identifiable, Equatable {
                 name: String,
                 albumType: String,
                 totalTracks: Int,
-                href: String,
                 releaseDate: String,
                 images: [SAKImage],
                 artists: [SAKArtist],
@@ -58,7 +54,6 @@ public struct SAKAlbum: Codable, Identifiable, Equatable {
         self.name = name
         self.albumType = albumType
         self.totalTracks = totalTracks
-        self.href = href
         self.releaseDate = releaseDate
         self.images = images
         self.artists = artists

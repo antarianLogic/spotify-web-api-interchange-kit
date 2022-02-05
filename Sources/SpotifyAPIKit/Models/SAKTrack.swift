@@ -22,8 +22,6 @@ public struct SAKTrack: Codable, Identifiable, Equatable {
 
     public let trackNumber: Int
 
-    public let href: String
-
     public let popularity: Int
 
     public let previewURL: String
@@ -39,7 +37,6 @@ public struct SAKTrack: Codable, Identifiable, Equatable {
         case durationMS = "duration_ms"
         case discNumber = "disc_number"
         case trackNumber = "track_number"
-        case href
         case popularity
         case previewURL = "preview_url"
         case album
@@ -52,7 +49,6 @@ public struct SAKTrack: Codable, Identifiable, Equatable {
                 durationMS: Int,
                 discNumber: Int,
                 trackNumber: Int,
-                href: String,
                 popularity: Int,
                 previewURL: String,
                 album: SAKAlbum,
@@ -63,7 +59,6 @@ public struct SAKTrack: Codable, Identifiable, Equatable {
         self.durationMS = durationMS
         self.discNumber = discNumber
         self.trackNumber = trackNumber
-        self.href = href
         self.popularity = popularity
         self.previewURL = previewURL
         self.album = album

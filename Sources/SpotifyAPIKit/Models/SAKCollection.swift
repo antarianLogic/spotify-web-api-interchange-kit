@@ -12,15 +12,11 @@ public struct SAKCollection<SpObj>: Codable, Equatable where SpObj: Codable & Id
 
     public let total: Int
 
-    public let href: String
-
     public let items: [SpObj]
 
     public init(total: Int,
-                href: String,
                 items: [SpObj]) {
         self.total = total
-        self.href = href
         self.items = items
     }
 }
