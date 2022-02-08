@@ -15,14 +15,18 @@ let package = Package(
             targets: ["SpotifyAPIKit"]),
     ],
     dependencies: [
-        .package(name: "RESTWebService", url: "https://github.com/nsgeek/rest-web-service.git", from: "0.3.0")
+        .package(name: "RESTWebService", url: "https://github.com/nsgeek/rest-web-service.git", from: "0.3.0"),
+        .package(name: "JSONUtils", url: "https://github.com/nsgeek/json-utils.git", from: "0.1.1")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SpotifyAPIKit",
-            dependencies: ["RESTWebService"]),
+            dependencies: ["RESTWebService",
+                           "JSONUtils"],
+            resources: [.copy("DataPresets/JSON")]
+        ),
         .testTarget(
             name: "SpotifyAPIKitTests",
             dependencies: ["SpotifyAPIKit"]),
