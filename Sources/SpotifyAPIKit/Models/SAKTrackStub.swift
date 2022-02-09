@@ -1,14 +1,14 @@
 //
-//  SAKTrack.swift
+//  SAKTrackStub.swift
 //  SpotifyAPIKit
 //
-//  Created by Carl Sheppard on 2/3/22.
+//  Created by Carl Sheppard on 2/9/22.
 //  Copyright © 2022 Antarian Logic LLC. All rights reserved.
 //
 
 import RESTWebService
 
-public struct SAKTrack: Codable, Identifiable, Equatable {
+public struct SAKTrackStub: Codable, Identifiable, Equatable {
 
     public let id: String
 
@@ -22,11 +22,7 @@ public struct SAKTrack: Codable, Identifiable, Equatable {
 
     public let trackNumber: Int
 
-    public let popularity: Int
-
     public let previewURL: String?
-
-    public let album: SAKAlbumStub
 
     public let artists: [SAKArtistStub]
 
@@ -37,9 +33,7 @@ public struct SAKTrack: Codable, Identifiable, Equatable {
         case durationMS = "duration_ms"
         case discNumber = "disc_number"
         case trackNumber = "track_number"
-        case popularity
         case previewURL = "preview_url"
-        case album
         case artists
     }
 
@@ -49,9 +43,7 @@ public struct SAKTrack: Codable, Identifiable, Equatable {
                 durationMS: Int,
                 discNumber: Int,
                 trackNumber: Int,
-                popularity: Int,
                 previewURL: String?,
-                album: SAKAlbumStub,
                 artists: [SAKArtistStub]) {
         self.id = id
         self.uri = uri
@@ -59,9 +51,7 @@ public struct SAKTrack: Codable, Identifiable, Equatable {
         self.durationMS = durationMS
         self.discNumber = discNumber
         self.trackNumber = trackNumber
-        self.popularity = popularity
         self.previewURL = previewURL
-        self.album = album
         self.artists = artists
     }
 }

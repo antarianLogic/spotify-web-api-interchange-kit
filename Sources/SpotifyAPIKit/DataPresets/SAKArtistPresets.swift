@@ -13,6 +13,6 @@ public extension SAKArtist {
 
     enum Presets {
 
-        public static let nirvana = JSONDecoder().decode(SAKArtist.self, fromResource: "ArtistNirvana")!
+        public static let nirvana = JSONDecoder().decode(SAKArtist.self, fromResource: "JSON/ArtistNirvana", inBundle: Bundle.module)!
     }
 }

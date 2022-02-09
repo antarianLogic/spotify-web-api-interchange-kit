@@ -12,16 +12,16 @@ public struct SAKImage: Codable, Equatable {
 
     public let url: String
 
-    public let height: Int
-
     public let width: Int
 
+    public let height: Int
+
     public init(url: String,
-                height: Int,
-                width: Int) {
+                width: Int,
+                height: Int) {
         self.url = url
-        self.height = height
         self.width = width
+        self.height = height
     }
 }
 

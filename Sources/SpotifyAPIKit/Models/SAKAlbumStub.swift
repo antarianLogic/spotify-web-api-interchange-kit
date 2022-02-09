@@ -1,14 +1,14 @@
 //
-//  SAKAlbum.swift
+//  SAKAlbumStub.swift
 //  SpotifyAPIKit
 //
-//  Created by Carl Sheppard on 2/3/22.
+//  Created by Carl Sheppard on 2/9/22.
 //  Copyright © 2022 Antarian Logic LLC. All rights reserved.
 //
 
 import RESTWebService
 
-public struct SAKAlbum: Codable, Identifiable, Equatable {
+public struct SAKAlbumStub: Codable, Identifiable, Equatable {
 
     public let id: String
 
@@ -22,13 +22,9 @@ public struct SAKAlbum: Codable, Identifiable, Equatable {
 
     public let releaseDate: String
 
-    public let popularity: Int
-
     public let images: [SAKImage]
 
     public let artists: [SAKArtistStub]
-
-    public let tracks: SAKCollection<SAKTrackStub>
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -37,10 +33,8 @@ public struct SAKAlbum: Codable, Identifiable, Equatable {
         case albumType = "album_type"
         case totalTracks = "total_tracks"
         case releaseDate = "release_date"
-        case popularity
         case images
         case artists
-        case tracks
     }
 
     public init(id: String,
@@ -49,19 +43,15 @@ public struct SAKAlbum: Codable, Identifiable, Equatable {
                 albumType: String,
                 totalTracks: Int,
                 releaseDate: String,
-                popularity: Int,
                 images: [SAKImage],
-                artists: [SAKArtistStub],
-                tracks: SAKCollection<SAKTrackStub>) {
+                artists: [SAKArtistStub]) {
         self.id = id
         self.uri = uri
         self.name = name
         self.albumType = albumType
         self.totalTracks = totalTracks
         self.releaseDate = releaseDate
-        self.popularity = popularity
         self.images = images
         self.artists = artists
-        self.tracks = tracks
     }
 }

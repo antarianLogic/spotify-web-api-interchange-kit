@@ -1,68 +1,1316 @@
 {
-  "album_type": "compilation",
-  "total_tracks": 9,
-  "available_markets": [
-    "CA",
-    "BR",
-    "IT"
-  ],
-  "external_urls": {
-    "spotify": "string"
-  },
-  "href": "string",
-  "id": "2up3OPMp9Tb4dAKM2erWXQ",
-  "images": [
-    {
-      "url": "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228\n",
-      "height": 300,
-      "width": 300
-    }
-  ],
-  "name": "string",
-  "release_date": "1981-12",
-  "release_date_precision": "year",
-  "restrictions": {
-    "reason": "market"
-  },
-  "type": "album",
-  "uri": "spotify:album:2up3OPMp9Tb4dAKM2erWXQ",
+  "album_type": "album",
   "artists": [
     {
       "external_urls": {
-        "spotify": "string"
+        "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
       },
-      "followers": {
-        "href": "string",
-        "total": 0
-      },
-      "genres": [
-        "Prog rock",
-        "Grunge"
-      ],
-      "href": "string",
-      "id": "string",
-      "images": [
-        {
-          "url": "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228\n",
-          "height": 300,
-          "width": 300
-        }
-      ],
-      "name": "string",
-      "popularity": 0,
+      "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+      "id": "6olE6TJLqED3rqDCT0FyPh",
+      "name": "Nirvana",
       "type": "artist",
-      "uri": "string"
+      "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
     }
   ],
+  "copyrights": [
+    {
+      "text": "© 2011 Geffen Records",
+      "type": "C"
+    },
+    {
+      "text": "This Compilation ℗ 2011 Geffen Records",
+      "type": "P"
+    }
+  ],
+  "external_ids": {
+    "upc": "00602527854090"
+  },
+  "external_urls": {
+    "spotify": "https://open.spotify.com/album/6yaiubHHJy8N8QcHy3julo"
+  },
+  "genres": [],
+  "href": "https://api.spotify.com/v1/albums/6yaiubHHJy8N8QcHy3julo",
+  "id": "6yaiubHHJy8N8QcHy3julo",
+  "images": [
+    {
+      "height": 640,
+      "url": "https://i.scdn.co/image/ab67616d0000b273d27b5404a8aa5b94856e24cc",
+      "width": 640
+    },
+    {
+      "height": 300,
+      "url": "https://i.scdn.co/image/ab67616d00001e02d27b5404a8aa5b94856e24cc",
+      "width": 300
+    },
+    {
+      "height": 64,
+      "url": "https://i.scdn.co/image/ab67616d00004851d27b5404a8aa5b94856e24cc",
+      "width": 64
+    }
+  ],
+  "label": "Geffen",
+  "name": "Nevermind",
+  "popularity": 54,
+  "release_date": "1991-09-26",
+  "release_date_precision": "day",
+  "total_tracks": 43,
   "tracks": {
-    "href": "https://api.spotify.com/v1/me/shows?offset=0&limit=20\n",
+    "href": "https://api.spotify.com/v1/albums/6yaiubHHJy8N8QcHy3julo/tracks?offset=0&limit=50&market=us",
     "items": [
-      {}
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 301920,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/75aLTVBSGIquqzQ6AkmK3Q"
+        },
+        "href": "https://api.spotify.com/v1/tracks/75aLTVBSGIquqzQ6AkmK3Q",
+        "id": "75aLTVBSGIquqzQ6AkmK3Q",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Smells Like Teen Spirit",
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:75aLTVBSGIquqzQ6AkmK3Q"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 255080,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/55n69wdvbtg1VmQ9rci2WE"
+        },
+        "href": "https://api.spotify.com/v1/tracks/55n69wdvbtg1VmQ9rci2WE",
+        "id": "55n69wdvbtg1VmQ9rci2WE",
+        "is_local": false,
+        "is_playable": true,
+        "name": "In Bloom",
+        "preview_url": null,
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:55n69wdvbtg1VmQ9rci2WE"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 218920,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7aCSKL5LmVhakVs0l483B5"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7aCSKL5LmVhakVs0l483B5",
+        "id": "7aCSKL5LmVhakVs0l483B5",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Come As You Are",
+        "preview_url": null,
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:7aCSKL5LmVhakVs0l483B5"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 184040,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5drcC8MOaSDONgXJbWbMJp"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5drcC8MOaSDONgXJbWbMJp",
+        "id": "5drcC8MOaSDONgXJbWbMJp",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Breed",
+        "preview_url": null,
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:5drcC8MOaSDONgXJbWbMJp"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 257053,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/07hCnHx9DhqZg5eN6RvCbd"
+        },
+        "href": "https://api.spotify.com/v1/tracks/07hCnHx9DhqZg5eN6RvCbd",
+        "id": "07hCnHx9DhqZg5eN6RvCbd",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Lithium",
+        "preview_url": null,
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:07hCnHx9DhqZg5eN6RvCbd"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 173853,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4VYbDiokszg5vrXmHxoMtC"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4VYbDiokszg5vrXmHxoMtC",
+        "id": "4VYbDiokszg5vrXmHxoMtC",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Polly",
+        "preview_url": null,
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:4VYbDiokszg5vrXmHxoMtC"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 142946,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4zZh3CwOCWGjxxfXNocAOe"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4zZh3CwOCWGjxxfXNocAOe",
+        "id": "4zZh3CwOCWGjxxfXNocAOe",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Territorial Pissings",
+        "preview_url": null,
+        "track_number": 7,
+        "type": "track",
+        "uri": "spotify:track:4zZh3CwOCWGjxxfXNocAOe"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 223880,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3LqBsbKFW6PTjUmmickpt0"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3LqBsbKFW6PTjUmmickpt0",
+        "id": "3LqBsbKFW6PTjUmmickpt0",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Drain You",
+        "preview_url": null,
+        "track_number": 8,
+        "type": "track",
+        "uri": "spotify:track:3LqBsbKFW6PTjUmmickpt0"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 156426,
+        "explicit": true,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/02UGlYzodYMeucgYo5DSHs"
+        },
+        "href": "https://api.spotify.com/v1/tracks/02UGlYzodYMeucgYo5DSHs",
+        "id": "02UGlYzodYMeucgYo5DSHs",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Lounge Act",
+        "preview_url": null,
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:02UGlYzodYMeucgYo5DSHs"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 211440,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1KI5l6Ek0Oj3UeTZqpTKdA"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1KI5l6Ek0Oj3UeTZqpTKdA",
+        "id": "1KI5l6Ek0Oj3UeTZqpTKdA",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Stay Away",
+        "preview_url": null,
+        "track_number": 10,
+        "type": "track",
+        "uri": "spotify:track:1KI5l6Ek0Oj3UeTZqpTKdA"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 194426,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7ACz2RanNIfGzr4J3VDDbI"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7ACz2RanNIfGzr4J3VDDbI",
+        "id": "7ACz2RanNIfGzr4J3VDDbI",
+        "is_local": false,
+        "is_playable": true,
+        "name": "On A Plain",
+        "preview_url": null,
+        "track_number": 11,
+        "type": "track",
+        "uri": "spotify:track:7ACz2RanNIfGzr4J3VDDbI"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 232146,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1UHoHmHWdu0EX557Oqoq2P"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1UHoHmHWdu0EX557Oqoq2P",
+        "id": "1UHoHmHWdu0EX557Oqoq2P",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Something In The Way",
+        "preview_url": null,
+        "track_number": 12,
+        "type": "track",
+        "uri": "spotify:track:1UHoHmHWdu0EX557Oqoq2P"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 403093,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1uGTyfBZkQpyS0wLEAdlvh"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1uGTyfBZkQpyS0wLEAdlvh",
+        "id": "1uGTyfBZkQpyS0wLEAdlvh",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Endless, Nameless",
+        "preview_url": null,
+        "track_number": 13,
+        "type": "track",
+        "uri": "spotify:track:1uGTyfBZkQpyS0wLEAdlvh"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 182186,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2sPgC35My3D4jrpoyTlBpX"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2sPgC35My3D4jrpoyTlBpX",
+        "id": "2sPgC35My3D4jrpoyTlBpX",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Even In His Youth - B-Side",
+        "preview_url": null,
+        "track_number": 14,
+        "type": "track",
+        "uri": "spotify:track:2sPgC35My3D4jrpoyTlBpX"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 285613,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3o8efKGjIewT6h0kpBv7WA"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3o8efKGjIewT6h0kpBv7WA",
+        "id": "3o8efKGjIewT6h0kpBv7WA",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Aneurysm",
+        "preview_url": null,
+        "track_number": 15,
+        "type": "track",
+        "uri": "spotify:track:3o8efKGjIewT6h0kpBv7WA"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 177133,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/53xWWbyhrTIBAdyOzWGmXf"
+        },
+        "href": "https://api.spotify.com/v1/tracks/53xWWbyhrTIBAdyOzWGmXf",
+        "id": "53xWWbyhrTIBAdyOzWGmXf",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Curmudgeon",
+        "preview_url": null,
+        "track_number": 16,
+        "type": "track",
+        "uri": "spotify:track:53xWWbyhrTIBAdyOzWGmXf"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 224133,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4bmY2jXW8ToL019R4NbQlH"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4bmY2jXW8ToL019R4NbQlH",
+        "id": "4bmY2jXW8ToL019R4NbQlH",
+        "is_local": false,
+        "is_playable": true,
+        "name": "D-7 - Live At The BBC",
+        "preview_url": null,
+        "track_number": 17,
+        "type": "track",
+        "uri": "spotify:track:4bmY2jXW8ToL019R4NbQlH"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 150066,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0hdpvWNIPL5ClPwiv1W01c"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0hdpvWNIPL5ClPwiv1W01c",
+        "id": "0hdpvWNIPL5ClPwiv1W01c",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Been A Son - Live At Paramount Theatre B-Side",
+        "preview_url": null,
+        "track_number": 18,
+        "type": "track",
+        "uri": "spotify:track:0hdpvWNIPL5ClPwiv1W01c"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 153946,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5GM8ChdpJ8vxO8qV3SR57x"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5GM8ChdpJ8vxO8qV3SR57x",
+        "id": "5GM8ChdpJ8vxO8qV3SR57x",
+        "is_local": false,
+        "is_playable": true,
+        "name": "School - Live At Paramount Theatre/1991",
+        "preview_url": null,
+        "track_number": 19,
+        "type": "track",
+        "uri": "spotify:track:5GM8ChdpJ8vxO8qV3SR57x"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 232253,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1bPEkM3x4UfPi31DiKYHCe"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1bPEkM3x4UfPi31DiKYHCe",
+        "id": "1bPEkM3x4UfPi31DiKYHCe",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Drain You - Live At Paramount Theatre B-Side",
+        "preview_url": null,
+        "track_number": 20,
+        "type": "track",
+        "uri": "spotify:track:1bPEkM3x4UfPi31DiKYHCe"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 123346,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5kdSuh2MpougnxdwT19aHO"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5kdSuh2MpougnxdwT19aHO",
+        "id": "5kdSuh2MpougnxdwT19aHO",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Sliver - Live At Del Mar B-Side",
+        "preview_url": null,
+        "track_number": 21,
+        "type": "track",
+        "uri": "spotify:track:5kdSuh2MpougnxdwT19aHO"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 167213,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3YyrdwyEDS5yyH6FQ9OEYR"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3YyrdwyEDS5yyH6FQ9OEYR",
+        "id": "3YyrdwyEDS5yyH6FQ9OEYR",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Polly - Live At Del Mar B-Side",
+        "preview_url": null,
+        "track_number": 22,
+        "type": "track",
+        "uri": "spotify:track:3YyrdwyEDS5yyH6FQ9OEYR"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 270733,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6xPX69VKrU1HSZcaYFeFl3"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6xPX69VKrU1HSZcaYFeFl3",
+        "id": "6xPX69VKrU1HSZcaYFeFl3",
+        "is_local": false,
+        "is_playable": true,
+        "name": "In Bloom - Smart Sessions",
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:6xPX69VKrU1HSZcaYFeFl3"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 193853,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4cXAs9YsLvCVrf2PDz2boo"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4cXAs9YsLvCVrf2PDz2boo",
+        "id": "4cXAs9YsLvCVrf2PDz2boo",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Immodium (Breed) - Smart Sessions",
+        "preview_url": null,
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:4cXAs9YsLvCVrf2PDz2boo"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 270173,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6vSnYKNnFCg89R7FOYYdzw"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6vSnYKNnFCg89R7FOYYdzw",
+        "id": "6vSnYKNnFCg89R7FOYYdzw",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Lithium - Smart Sessions",
+        "preview_url": null,
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:6vSnYKNnFCg89R7FOYYdzw"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 178253,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7Ky2ldwe0tjYy9PoxV30b9"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7Ky2ldwe0tjYy9PoxV30b9",
+        "id": "7Ky2ldwe0tjYy9PoxV30b9",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Polly - Smart Sessions",
+        "preview_url": null,
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:7Ky2ldwe0tjYy9PoxV30b9"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 208026,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7HrLllCcZRTK6dKHAeN9ng"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7HrLllCcZRTK6dKHAeN9ng",
+        "id": "7HrLllCcZRTK6dKHAeN9ng",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Pay To Play - Smart Sessions",
+        "preview_url": null,
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:7HrLllCcZRTK6dKHAeN9ng"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 299853,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1JQ2g36EDQB3RAkCEhQ6dE"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1JQ2g36EDQB3RAkCEhQ6dE",
+        "id": "1JQ2g36EDQB3RAkCEhQ6dE",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Here She Comes Now - Smart Sessions",
+        "preview_url": null,
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:1JQ2g36EDQB3RAkCEhQ6dE"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 234106,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4oOevM6rfw6eb3t9Jd2eMi"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4oOevM6rfw6eb3t9Jd2eMi",
+        "id": "4oOevM6rfw6eb3t9Jd2eMi",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Dive - Smart Sessions",
+        "preview_url": null,
+        "track_number": 7,
+        "type": "track",
+        "uri": "spotify:track:4oOevM6rfw6eb3t9Jd2eMi"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 214893,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0w8h4o12blpGVUEoltu0Va"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0w8h4o12blpGVUEoltu0Va",
+        "id": "0w8h4o12blpGVUEoltu0Va",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Sappy - Smart Sessions",
+        "preview_url": null,
+        "track_number": 8,
+        "type": "track",
+        "uri": "spotify:track:0w8h4o12blpGVUEoltu0Va"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 339280,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7vDdnLW4EqpQk2XSnUMVxZ"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7vDdnLW4EqpQk2XSnUMVxZ",
+        "id": "7vDdnLW4EqpQk2XSnUMVxZ",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Smells Like Teen Spirit - Boombox Rehearsals",
+        "preview_url": null,
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:7vDdnLW4EqpQk2XSnUMVxZ"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 192333,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7hkhM28IxYJaW1c4qcT2xP"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7hkhM28IxYJaW1c4qcT2xP",
+        "id": "7hkhM28IxYJaW1c4qcT2xP",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Verse Chorus Verse - Boombox Rehearsals",
+        "preview_url": null,
+        "track_number": 10,
+        "type": "track",
+        "uri": "spotify:track:7hkhM28IxYJaW1c4qcT2xP"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 130853,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ohDjz093UApagfwf2Isn6"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1ohDjz093UApagfwf2Isn6",
+        "id": "1ohDjz093UApagfwf2Isn6",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Territorial Pissings - Boombox Rehearsals",
+        "preview_url": null,
+        "track_number": 11,
+        "type": "track",
+        "uri": "spotify:track:1ohDjz093UApagfwf2Isn6"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 156280,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/49S8ciJ3TCCepq4ZwMXqyg"
+        },
+        "href": "https://api.spotify.com/v1/tracks/49S8ciJ3TCCepq4ZwMXqyg",
+        "id": "49S8ciJ3TCCepq4ZwMXqyg",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Lounge Act - Boombox Rehearsals",
+        "preview_url": null,
+        "track_number": 12,
+        "type": "track",
+        "uri": "spotify:track:49S8ciJ3TCCepq4ZwMXqyg"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 251293,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/550IepqW3dxjVWHvX2FxTb"
+        },
+        "href": "https://api.spotify.com/v1/tracks/550IepqW3dxjVWHvX2FxTb",
+        "id": "550IepqW3dxjVWHvX2FxTb",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Come As You Are - Boombox Rehearsals",
+        "preview_url": null,
+        "track_number": 13,
+        "type": "track",
+        "uri": "spotify:track:550IepqW3dxjVWHvX2FxTb"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 261453,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6yhtu9zbiV1FRcaED8BDIC"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6yhtu9zbiV1FRcaED8BDIC",
+        "id": "6yhtu9zbiV1FRcaED8BDIC",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Old Age - Boombox Rehearsals",
+        "preview_url": null,
+        "track_number": 14,
+        "type": "track",
+        "uri": "spotify:track:6yhtu9zbiV1FRcaED8BDIC"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 330240,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7IHIfuHN27Is6XgeFmBo9T"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7IHIfuHN27Is6XgeFmBo9T",
+        "id": "7IHIfuHN27Is6XgeFmBo9T",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Something In The Way - Boombox Rehearsals",
+        "preview_url": null,
+        "track_number": 15,
+        "type": "track",
+        "uri": "spotify:track:7IHIfuHN27Is6XgeFmBo9T"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 200333,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2jrsYZf4nTIRQhcF70H4QU"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2jrsYZf4nTIRQhcF70H4QU",
+        "id": "2jrsYZf4nTIRQhcF70H4QU",
+        "is_local": false,
+        "is_playable": true,
+        "name": "On A Plain - Boombox Rehearsals",
+        "preview_url": null,
+        "track_number": 16,
+        "type": "track",
+        "uri": "spotify:track:2jrsYZf4nTIRQhcF70H4QU"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 242586,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7ch2VAoC5hcpfFE2uPSEaR"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7ch2VAoC5hcpfFE2uPSEaR",
+        "id": "7ch2VAoC5hcpfFE2uPSEaR",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Drain You - Live At The BBC",
+        "preview_url": null,
+        "track_number": 17,
+        "type": "track",
+        "uri": "spotify:track:7ch2VAoC5hcpfFE2uPSEaR"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 2,
+        "duration_ms": 203653,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5E0hKeFciAk5uAf9TTAfb7"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5E0hKeFciAk5uAf9TTAfb7",
+        "id": "5E0hKeFciAk5uAf9TTAfb7",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Something In The Way - Live At The BBC",
+        "preview_url": null,
+        "track_number": 18,
+        "type": "track",
+        "uri": "spotify:track:5E0hKeFciAk5uAf9TTAfb7"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 3,
+        "duration_ms": 281053,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5PXSx1MMm99XeusJKyEDzM"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5PXSx1MMm99XeusJKyEDzM",
+        "id": "5PXSx1MMm99XeusJKyEDzM",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Aneurysm - Live At The Paramount",
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:5PXSx1MMm99XeusJKyEDzM"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 3,
+        "duration_ms": 227000,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7GO6JsgloxoS6dFqNMmaW8"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7GO6JsgloxoS6dFqNMmaW8",
+        "id": "7GO6JsgloxoS6dFqNMmaW8",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Drain You - Live At The Paramount/1991",
+        "preview_url": null,
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:7GO6JsgloxoS6dFqNMmaW8"
+      },
+      {
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+            },
+            "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+            "id": "6olE6TJLqED3rqDCT0FyPh",
+            "name": "Nirvana",
+            "type": "artist",
+            "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh"
+          }
+        ],
+        "disc_number": 3,
+        "duration_ms": 183800,
+        "explicit": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5RX5x24vOXBWrZNzF2Wmta"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5RX5x24vOXBWrZNzF2Wmta",
+        "id": "5RX5x24vOXBWrZNzF2Wmta",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Breed - Live At The Paramount",
+        "preview_url": null,
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:5RX5x24vOXBWrZNzF2Wmta"
+      }
     ],
-    "limit": 20,
-    "next": "https://api.spotify.com/v1/me/shows?offset=1&limit=1",
+    "limit": 50,
+    "next": null,
     "offset": 0,
-    "previous": "https://api.spotify.com/v1/me/shows?offset=1&limit=1",
-    "total": 4
-  }
+    "previous": null,
+    "total": 43
+  },
+  "type": "album",
+  "uri": "spotify:album:6yaiubHHJy8N8QcHy3julo"
 }

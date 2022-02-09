@@ -13,6 +13,6 @@ public extension SAKTrack {
 
     enum Presets {
 
-        public static let lithium = JSONDecoder().decode(SAKTrack.self, fromResource: "TrackLithium")!
+        public static let lithium = JSONDecoder().decode(SAKTrack.self, fromResource: "JSON/TrackLithium", inBundle: Bundle.module)!
     }
 }

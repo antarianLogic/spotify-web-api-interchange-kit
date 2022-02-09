@@ -13,6 +13,6 @@ public extension SAKAlbum {
 
     enum Presets {
 
-        public static let nevermind = JSONDecoder().decode(SAKAlbum.self, fromResource: "AlbumNevermind")!
+        public static let nevermind = JSONDecoder().decode(SAKAlbum.self, fromResource: "JSON/AlbumNevermind", inBundle: Bundle.module)!
     }
 }

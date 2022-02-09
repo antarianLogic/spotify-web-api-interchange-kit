@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "RESTWebService", url: "https://github.com/nsgeek/rest-web-service.git", from: "0.3.0"),
-        .package(name: "JSONUtils", url: "https://github.com/nsgeek/json-utils.git", from: "0.1.1")
+        .package(name: "JSONUtils", url: "https://github.com/nsgeek/json-utils.git", from: "0.1.4")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
