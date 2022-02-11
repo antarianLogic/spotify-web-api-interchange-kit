@@ -19,9 +19,29 @@ public enum SpotifyAPIRoutes {
         return url
     }()
 
+    public static let authBaseURL: URL = {
+        guard let url = URL(string: "https://accounts.spotify.com") else { fatalError("Invalid auth base URL!") }
+
+        return url
+    }()
+
+    public static func getAuthToken(clientID: String,
+                                    clientSecret: String,
+                                    timeoutInterval: TimeInterval? = nil) -> RESTResource {
+        let idAndSecret = "\(clientID):\(clientSecret)"
+        let encodedValue = Data(idAndSecret.utf8).base64EncodedString()
+        let authHeaders: [String : String] = ["Content-Type" : "application/x-www-form-urlencoded",
+                                              "Authorization" : "Basic \(encodedValue)"]
+        return RESTResource(method: .post,
+                            path: "/api/token",
+                            headers: authHeaders,
+                            bodyParameters: [URLQueryItem(name: "grant_type", value: "client_credentials")],
+                            timeoutInterval: timeoutInterval)
+    }
+
     public static func getAlbum(withID id: String,
                                 cacheInterval: TimeInterval? = nil,
-                                timeoutInterval: TimeInterval? = nil) -> RESTResource<SAKAlbum> {
+                                timeoutInterval: TimeInterval? = nil) -> RESTResource {
         return RESTResource(path: "/albums/\(id.lowercased())",
                             headers: headers,
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
@@ -31,7 +51,7 @@ public enum SpotifyAPIRoutes {
 
     public static func getTrack(withID id: String,
                                 cacheInterval: TimeInterval? = nil,
-                                timeoutInterval: TimeInterval? = nil) -> RESTResource<SAKTrack> {
+                                timeoutInterval: TimeInterval? = nil) -> RESTResource {
         return RESTResource(path: "/tracks/\(id.lowercased())",
                             headers: headers,
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
@@ -43,7 +63,7 @@ public enum SpotifyAPIRoutes {
                               types: [String],
                               resultLimit: UInt = 100,
                               offset: UInt = 0,
-                              timeoutInterval: TimeInterval? = nil) -> RESTResource<SAKSearchResults> {
+                              timeoutInterval: TimeInterval? = nil) -> RESTResource {
         let typesString = types.joined(separator: ",")
         return RESTResource(path: "/search",
                             headers: headers,

@@ -27,6 +27,20 @@ final class SpotifyAPIRoutesTests: XCTestCase {
         XCTAssertEqual(SpotifyAPIRoutes.baseURL.absoluteString, "https://api.spotify.com/v1")
     }
 
+    func testGetAuthToken() {
+        let resource = SpotifyAPIRoutes.getAuthToken(clientID: "boo123", clientSecret: "password", timeoutInterval: 15)
+        XCTAssertEqual(resource.path, "/api/token")
+        XCTAssertEqual(resource.headers, ["Authorization" : "Basic Ym9vMTIzOnBhc3N3b3Jk",
+                                          "Content-Type": "application/x-www-form-urlencoded"])
+        XCTAssertTrue(resource.queryParameters.isEmpty)
+        XCTAssertEqual(resource.bodyParameters, [URLQueryItem(name: "grant_type", value: "client_credentials")])
+        XCTAssertNil(resource.pageSizeQueryItem)
+        XCTAssertNil(resource.offsetQueryItem)
+        XCTAssertNil(resource.pageQueryItem)
+        XCTAssertNil(resource.cacheInterval)
+        XCTAssertEqual(resource.timeoutInterval, 15)
+    }
+
     func testGetAlbum() {
         SpotifyAPIRoutes.accessToken = "NgCXRKMzYjw"
         let resource = SpotifyAPIRoutes.getAlbum(withID: "Abcd1234", cacheInterval: 3600, timeoutInterval: 30)
@@ -34,10 +48,10 @@ final class SpotifyAPIRoutesTests: XCTestCase {
         XCTAssertEqual(resource.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
         XCTAssertEqual(resource.queryParameters, [URLQueryItem(name: "market", value: "us")])
+        XCTAssertTrue(resource.bodyParameters.isEmpty)
         XCTAssertNil(resource.pageSizeQueryItem)
         XCTAssertNil(resource.offsetQueryItem)
         XCTAssertNil(resource.pageQueryItem)
-        XCTAssertNil(resource.model)
         XCTAssertEqual(resource.cacheInterval, 3600)
         XCTAssertEqual(resource.timeoutInterval, 30)
     }
@@ -49,10 +63,10 @@ final class SpotifyAPIRoutesTests: XCTestCase {
         XCTAssertEqual(resource.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
         XCTAssertEqual(resource.queryParameters, [URLQueryItem(name: "market", value: "us")])
+        XCTAssertTrue(resource.bodyParameters.isEmpty)
         XCTAssertNil(resource.pageSizeQueryItem)
         XCTAssertNil(resource.offsetQueryItem)
         XCTAssertNil(resource.pageQueryItem)
-        XCTAssertNil(resource.model)
         XCTAssertEqual(resource.cacheInterval, 3600)
         XCTAssertEqual(resource.timeoutInterval, 40)
     }
@@ -66,10 +80,10 @@ final class SpotifyAPIRoutesTests: XCTestCase {
         XCTAssertEqual(resource.queryParameters, [URLQueryItem(name: "q", value: "upc: 1234"),
                                                   URLQueryItem(name: "type", value: "album"),
                                                   URLQueryItem(name: "market", value: "us")])
+        XCTAssertTrue(resource.bodyParameters.isEmpty)
         XCTAssertEqual(resource.pageSizeQueryItem, URLQueryItem(name: "limit", value: "10"))
         XCTAssertEqual(resource.offsetQueryItem, URLQueryItem(name: "offset", value: "2"))
         XCTAssertNil(resource.pageQueryItem)
-        XCTAssertNil(resource.model)
         XCTAssertNil(resource.cacheInterval)
         XCTAssertEqual(resource.timeoutInterval, 50)
     }
