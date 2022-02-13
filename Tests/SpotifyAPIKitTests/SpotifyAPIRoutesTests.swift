@@ -44,7 +44,7 @@ final class SpotifyAPIRoutesTests: XCTestCase {
     func testGetAlbum() {
         SpotifyAPIRoutes.accessToken = "NgCXRKMzYjw"
         let resource = SpotifyAPIRoutes.getAlbum(withID: "Abcd1234", cacheInterval: 3600, timeoutInterval: 30)
-        XCTAssertEqual(resource.path, "/albums/abcd1234")
+        XCTAssertEqual(resource.path, "/albums/Abcd1234")
         XCTAssertEqual(resource.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
         XCTAssertEqual(resource.queryParameters, [URLQueryItem(name: "market", value: "us")])
@@ -59,7 +59,7 @@ final class SpotifyAPIRoutesTests: XCTestCase {
     func testGetTrack() {
         SpotifyAPIRoutes.accessToken = "NgCXRKMzYjw"
         let resource = SpotifyAPIRoutes.getTrack(withID: "Bcde2345", cacheInterval: 3600, timeoutInterval: 40)
-        XCTAssertEqual(resource.path, "/tracks/bcde2345")
+        XCTAssertEqual(resource.path, "/tracks/Bcde2345")
         XCTAssertEqual(resource.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
         XCTAssertEqual(resource.queryParameters, [URLQueryItem(name: "market", value: "us")])

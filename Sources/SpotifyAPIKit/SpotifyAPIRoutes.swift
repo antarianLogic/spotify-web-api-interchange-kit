@@ -42,7 +42,7 @@ public enum SpotifyAPIRoutes {
     public static func getAlbum(withID id: String,
                                 cacheInterval: TimeInterval? = nil,
                                 timeoutInterval: TimeInterval? = nil) -> RESTResource {
-        return RESTResource(path: "/albums/\(id.lowercased())",
+        return RESTResource(path: "/albums/\(id)",
                             headers: headers,
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
                             cacheInterval: cacheInterval,
@@ -52,7 +52,7 @@ public enum SpotifyAPIRoutes {
     public static func getTrack(withID id: String,
                                 cacheInterval: TimeInterval? = nil,
                                 timeoutInterval: TimeInterval? = nil) -> RESTResource {
-        return RESTResource(path: "/tracks/\(id.lowercased())",
+        return RESTResource(path: "/tracks/\(id)",
                             headers: headers,
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
                             cacheInterval: cacheInterval,
