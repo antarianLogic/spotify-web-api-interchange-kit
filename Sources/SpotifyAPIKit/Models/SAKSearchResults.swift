@@ -10,13 +10,17 @@ import RESTWebService
 
 public struct SAKSearchResults: Codable, Equatable {
 
-    public let tracks: SAKCollection<SAKTrack>
+    public let tracks: SAKCollection<SAKTrackStub>?
 
-    public let albums: SAKCollection<SAKAlbum>
+    public let artists: SAKCollection<SAKArtistStub>?
 
-    public init(tracks: SAKCollection<SAKTrack>,
-                albums: SAKCollection<SAKAlbum>) {
+    public let albums: SAKCollection<SAKAlbumStub>?
+
+    public init(tracks: SAKCollection<SAKTrackStub>?,
+                artists: SAKCollection<SAKArtistStub>?,
+                albums: SAKCollection<SAKAlbumStub>?) {
         self.tracks = tracks
+        self.artists = artists
         self.albums = albums
     }
 }

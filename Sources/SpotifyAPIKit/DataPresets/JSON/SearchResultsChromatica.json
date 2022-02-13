@@ -1,0 +1,98 @@
+{
+  "albums": {
+    "href": "https://api.spotify.com/v1/search?query=album%3AChromatica+artist%3ALady+Gaga&type=album&market=US&locale=en-US%2Cen%3Bq%3D0.9&offset=0&limit=5",
+    "items": [
+      {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms"
+            },
+            "href": "https://api.spotify.com/v1/artists/1HY2Jd0NmPuamShAr6KMms",
+            "id": "1HY2Jd0NmPuamShAr6KMms",
+            "name": "Lady Gaga",
+            "type": "artist",
+            "uri": "spotify:artist:1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/05c49JgPmL4Uz2ZeqRx5SP"
+        },
+        "href": "https://api.spotify.com/v1/albums/05c49JgPmL4Uz2ZeqRx5SP",
+        "id": "05c49JgPmL4Uz2ZeqRx5SP",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736040effba89b9b00a6f6743a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026040effba89b9b00a6f6743a",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516040effba89b9b00a6f6743a",
+            "width": 64
+          }
+        ],
+        "name": "Chromatica",
+        "release_date": "2020-05-29",
+        "release_date_precision": "day",
+        "total_tracks": 16,
+        "type": "album",
+        "uri": "spotify:album:05c49JgPmL4Uz2ZeqRx5SP"
+      },
+      {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms"
+            },
+            "href": "https://api.spotify.com/v1/artists/1HY2Jd0NmPuamShAr6KMms",
+            "id": "1HY2Jd0NmPuamShAr6KMms",
+            "name": "Lady Gaga",
+            "type": "artist",
+            "uri": "spotify:artist:1HY2Jd0NmPuamShAr6KMms"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3OevODyllQCrhudfLLnV3y"
+        },
+        "href": "https://api.spotify.com/v1/albums/3OevODyllQCrhudfLLnV3y",
+        "id": "3OevODyllQCrhudfLLnV3y",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273335b00966a9839d4dde60256",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02335b00966a9839d4dde60256",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851335b00966a9839d4dde60256",
+            "width": 64
+          }
+        ],
+        "name": "Dawn Of Chromatica",
+        "release_date": "2021-09-03",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album",
+        "uri": "spotify:album:3OevODyllQCrhudfLLnV3y"
+      }
+    ],
+    "limit": 5,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 2
+  }
+}
