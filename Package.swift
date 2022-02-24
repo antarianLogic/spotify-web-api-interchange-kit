@@ -15,8 +15,8 @@ let package = Package(
             targets: ["SpotifyAPIKit"]),
     ],
     dependencies: [
-        .package(name: "RESTWebService", url: "https://github.com/nsgeek/rest-web-service.git", from: "0.3.9"),
-        .package(name: "JSONUtils", url: "https://github.com/nsgeek/json-utils.git", from: "0.1.4")
+        .package(name: "RESTWebService", url: "https://github.com/antarianLogic/rest-web-service.git", from: "0.3.9"),
+        .package(name: "JSONUtils", url: "https://github.com/antarianLogic/json-utils.git", from: "0.1.4")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
