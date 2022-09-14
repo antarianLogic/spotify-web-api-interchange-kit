@@ -1,13 +1,12 @@
-// swift-tools-version:5.5
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version:5.7
 
 import PackageDescription
 
 let package = Package(
     name: "SpotifyAPIKit",
     platforms: [
-        .iOS("15.0"),
-        .macOS("12.0")
+        .iOS(.v16),
+        .macOS(.v13)
     ],
     products: [
         .library(
@@ -15,16 +14,14 @@ let package = Package(
             targets: ["SpotifyAPIKit"]),
     ],
     dependencies: [
-        .package(name: "RESTWebService", url: "https://github.com/antarianLogic/rest-web-service.git", from: "0.3.10"),
-        .package(name: "JSONUtils", url: "https://github.com/antarianLogic/json-utils.git", from: "0.1.4")
+        .package(url: "https://github.com/antarianLogic/rest-web-service", from: "0.4.0"),
+        .package(url: "https://github.com/antarianLogic/json-utils", from: "0.2.0")
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SpotifyAPIKit",
-            dependencies: ["RESTWebService",
-                           "JSONUtils"],
+            dependencies: [.product(name: "RESTWebService", package: "rest-web-service"),
+                           .product(name: "JSONUtils", package: "json-utils")],
             resources: [.copy("DataPresets/JSON")]
         ),
         .testTarget(
