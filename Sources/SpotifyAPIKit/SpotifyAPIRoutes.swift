@@ -39,6 +39,16 @@ public enum SpotifyAPIRoutes {
                             timeoutInterval: timeoutInterval)
     }
 
+    public static func getArtistTopTracks(withID id: String,
+                                          cacheInterval: TimeInterval? = nil,
+                                          timeoutInterval: TimeInterval? = nil) -> RESTResource {
+        return RESTResource(path: "/artists/\(id)/top-tracks",
+                            headers: headers,
+                            queryParameters: [URLQueryItem(name: "market", value: "us")],
+                            cacheInterval: cacheInterval,
+                            timeoutInterval: timeoutInterval)
+    }
+
     public static func getAlbum(withID id: String,
                                 cacheInterval: TimeInterval? = nil,
                                 timeoutInterval: TimeInterval? = nil) -> RESTResource {

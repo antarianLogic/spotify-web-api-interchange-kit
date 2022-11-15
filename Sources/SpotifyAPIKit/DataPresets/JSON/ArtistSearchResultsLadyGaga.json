@@ -1,0 +1,283 @@
+{
+  "artists": {
+    "href": "https://api.spotify.com/v1/search?query=artist%3A%22Lady+Gaga%22&type=artist&market=US&offset=0&limit=20",
+    "items": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms"
+        },
+        "followers": {
+          "href": null,
+          "total": 23724138
+        },
+        "genres": [
+          "art pop",
+          "dance pop",
+          "pop"
+        ],
+        "href": "https://api.spotify.com/v1/artists/1HY2Jd0NmPuamShAr6KMms",
+        "id": "1HY2Jd0NmPuamShAr6KMms",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab6761610000e5ebc8d3d98a1bccbe71393dbfbf",
+            "width": 640
+          },
+          {
+            "height": 320,
+            "url": "https://i.scdn.co/image/ab67616100005174c8d3d98a1bccbe71393dbfbf",
+            "width": 320
+          },
+          {
+            "height": 160,
+            "url": "https://i.scdn.co/image/ab6761610000f178c8d3d98a1bccbe71393dbfbf",
+            "width": 160
+          }
+        ],
+        "name": "Lady Gaga",
+        "popularity": 84,
+        "type": "artist",
+        "uri": "spotify:artist:1HY2Jd0NmPuamShAr6KMms"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/78RN4N0o7KIcN63nH8Twxa"
+        },
+        "followers": {
+          "href": null,
+          "total": 7
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/78RN4N0o7KIcN63nH8Twxa",
+        "id": "78RN4N0o7KIcN63nH8Twxa",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273dd81891a6b011602c09855d1",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02dd81891a6b011602c09855d1",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851dd81891a6b011602c09855d1",
+            "width": 64
+          }
+        ],
+        "name": "Lady Gaga Orkestband",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:78RN4N0o7KIcN63nH8Twxa"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/26v8sW8b04x0LmkPIiYr4d"
+        },
+        "followers": {
+          "href": null,
+          "total": 263
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/26v8sW8b04x0LmkPIiYr4d",
+        "id": "26v8sW8b04x0LmkPIiYr4d",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736a6e2cb43c3a4db793c65c8e",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026a6e2cb43c3a4db793c65c8e",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516a6e2cb43c3a4db793c65c8e",
+            "width": 64
+          }
+        ],
+        "name": "Tribute To Lady Gaga",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:26v8sW8b04x0LmkPIiYr4d"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/38HjA3mCsjOcAgJiJLsx2D"
+        },
+        "followers": {
+          "href": null,
+          "total": 2677
+        },
+        "genres": [
+          "fake"
+        ],
+        "href": "https://api.spotify.com/v1/artists/38HjA3mCsjOcAgJiJLsx2D",
+        "id": "38HjA3mCsjOcAgJiJLsx2D",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27355a58e7acfb8efb270ff590f",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0255a58e7acfb8efb270ff590f",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485155a58e7acfb8efb270ff590f",
+            "width": 64
+          }
+        ],
+        "name": "Lady Gaga for Piano",
+        "popularity": 3,
+        "type": "artist",
+        "uri": "spotify:artist:38HjA3mCsjOcAgJiJLsx2D"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/02OqjFXKgtAtRpr8CRaZjv"
+        },
+        "followers": {
+          "href": null,
+          "total": 113
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/02OqjFXKgtAtRpr8CRaZjv",
+        "id": "02OqjFXKgtAtRpr8CRaZjv",
+        "images": [],
+        "name": "Lady Gaga's Karaoke Band",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:02OqjFXKgtAtRpr8CRaZjv"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/47I1Io01l1zubnuzDPb9OB"
+        },
+        "followers": {
+          "href": null,
+          "total": 670
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/47I1Io01l1zubnuzDPb9OB",
+        "id": "47I1Io01l1zubnuzDPb9OB",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27363d5ac3a3fe8fd2e79b2053d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0263d5ac3a3fe8fd2e79b2053d",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485163d5ac3a3fe8fd2e79b2053d",
+            "width": 64
+          }
+        ],
+        "name": "Lady Gaga Tribute Orchestra",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:47I1Io01l1zubnuzDPb9OB"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/6HPPujHWr0Yh2pSar2f5ix"
+        },
+        "followers": {
+          "href": null,
+          "total": 554
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/6HPPujHWr0Yh2pSar2f5ix",
+        "id": "6HPPujHWr0Yh2pSar2f5ix",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2730cf09dfcecb24cc397e1c4df",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e020cf09dfcecb24cc397e1c4df",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048510cf09dfcecb24cc397e1c4df",
+            "width": 64
+          }
+        ],
+        "name": "Lady Gaga's Karaoke Hits",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:6HPPujHWr0Yh2pSar2f5ix"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2ErK7WkGNbdgvSAYoEzyLz"
+        },
+        "followers": {
+          "href": null,
+          "total": 356
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/2ErK7WkGNbdgvSAYoEzyLz",
+        "id": "2ErK7WkGNbdgvSAYoEzyLz",
+        "images": [],
+        "name": "Made famous by Lady Gaga",
+        "popularity": 2,
+        "type": "artist",
+        "uri": "spotify:artist:2ErK7WkGNbdgvSAYoEzyLz"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/7BXMFyPdBOP61qeL3E5qU7"
+        },
+        "followers": {
+          "href": null,
+          "total": 509
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/7BXMFyPdBOP61qeL3E5qU7",
+        "id": "7BXMFyPdBOP61qeL3E5qU7",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2733a65c6304f3b097003253580",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e023a65c6304f3b097003253580",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048513a65c6304f3b097003253580",
+            "width": 64
+          }
+        ],
+        "name": "Gaga For Lady Stars",
+        "popularity": 8,
+        "type": "artist",
+        "uri": "spotify:artist:7BXMFyPdBOP61qeL3E5qU7"
+      }
+    ],
+    "limit": 20,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 9
+  }
+}

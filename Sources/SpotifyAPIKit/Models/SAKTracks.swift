@@ -1,0 +1,18 @@
+//
+//  SAKTracks.swift
+//  SpotifyAPIKit
+//
+//  Created by Carl Sheppard on 11/14/22.
+//  Copyright © 2022 Antarian Logic LLC. All rights reserved.
+//
+
+import RESTWebService
+
+public struct SAKTracks: Codable, Equatable {
+
+    public let tracks: [SAKTrack]
+
+    public init(tracks: [SAKTrack]) {
+        self.tracks = tracks
+    }
+}

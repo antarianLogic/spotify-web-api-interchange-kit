@@ -13,6 +13,10 @@ public extension SAKSearchResults {
 
     enum Presets {
 
-        public static let chromatica = JSONDecoder().decode(SAKSearchResults.self, fromResource: "JSON/SearchResultsChromatica", inBundle: Bundle.module)!
+        // Albums
+        public static let chromatica = JSONDecoder().decode(SAKSearchResults.self, fromResource: "JSON/AlbumSearchResultsChromatica", inBundle: Bundle.module)!
+
+        // Artists
+        public static let ladyGaga = JSONDecoder().decode(SAKSearchResults.self, fromResource: "JSON/ArtistSearchResultsLadyGaga", inBundle: Bundle.module)!
     }
 }
