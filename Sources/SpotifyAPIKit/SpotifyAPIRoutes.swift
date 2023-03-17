@@ -27,12 +27,12 @@ public enum SpotifyAPIRoutes {
 
     public static func getAuthToken(clientID: String,
                                     clientSecret: String,
-                                    timeoutInterval: TimeInterval? = nil) -> RESTResource {
+                                    timeoutInterval: TimeInterval? = nil) -> RESTEndpoint {
         let idAndSecret = "\(clientID):\(clientSecret)"
         let encodedValue = Data(idAndSecret.utf8).base64EncodedString()
         let authHeaders: [String : String] = ["Content-Type" : "application/x-www-form-urlencoded",
                                               "Authorization" : "Basic \(encodedValue)"]
-        return RESTResource(method: .post,
+        return RESTEndpoint(method: .post,
                             path: "/api/token",
                             headers: authHeaders,
                             bodyParameters: [URLQueryItem(name: "grant_type", value: "client_credentials")],
@@ -41,8 +41,8 @@ public enum SpotifyAPIRoutes {
 
     public static func getArtistTopTracks(withID id: String,
                                           cacheInterval: TimeInterval? = nil,
-                                          timeoutInterval: TimeInterval? = nil) -> RESTResource {
-        return RESTResource(path: "/artists/\(id)/top-tracks",
+                                          timeoutInterval: TimeInterval? = nil) -> RESTEndpoint {
+        return RESTEndpoint(path: "/artists/\(id)/top-tracks",
                             headers: headers,
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
                             cacheInterval: cacheInterval,
@@ -51,8 +51,8 @@ public enum SpotifyAPIRoutes {
 
     public static func getAlbum(withID id: String,
                                 cacheInterval: TimeInterval? = nil,
-                                timeoutInterval: TimeInterval? = nil) -> RESTResource {
-        return RESTResource(path: "/albums/\(id)",
+                                timeoutInterval: TimeInterval? = nil) -> RESTEndpoint {
+        return RESTEndpoint(path: "/albums/\(id)",
                             headers: headers,
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
                             cacheInterval: cacheInterval,
@@ -61,8 +61,8 @@ public enum SpotifyAPIRoutes {
 
     public static func getTrack(withID id: String,
                                 cacheInterval: TimeInterval? = nil,
-                                timeoutInterval: TimeInterval? = nil) -> RESTResource {
-        return RESTResource(path: "/tracks/\(id)",
+                                timeoutInterval: TimeInterval? = nil) -> RESTEndpoint {
+        return RESTEndpoint(path: "/tracks/\(id)",
                             headers: headers,
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
                             cacheInterval: cacheInterval,
@@ -73,9 +73,9 @@ public enum SpotifyAPIRoutes {
                               types: [String],
                               resultLimit: UInt = 100,
                               offset: UInt = 0,
-                              timeoutInterval: TimeInterval? = nil) -> RESTResource {
+                              timeoutInterval: TimeInterval? = nil) -> RESTEndpoint {
         let typesString = types.joined(separator: ",")
-        return RESTResource(path: "/search",
+        return RESTEndpoint(path: "/search",
                             headers: headers,
                             queryParameters: [URLQueryItem(name: "q", value: query),
                                               URLQueryItem(name: "type", value: typesString),

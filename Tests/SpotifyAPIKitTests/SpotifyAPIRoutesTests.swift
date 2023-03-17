@@ -18,8 +18,8 @@ final class SpotifyAPIRoutesTests: XCTestCase {
 
     func testHeaders() {
         SpotifyAPIRoutes.accessToken = "NgCXRKMzYjw"
-        let resource = SpotifyAPIRoutes.getAlbum(withID: "1234")
-        XCTAssertEqual(resource.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
+        let endpoint = SpotifyAPIRoutes.getAlbum(withID: "1234")
+        XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
     }
 
@@ -28,78 +28,78 @@ final class SpotifyAPIRoutesTests: XCTestCase {
     }
 
     func testGetAuthToken() {
-        let resource = SpotifyAPIRoutes.getAuthToken(clientID: "boo123", clientSecret: "password", timeoutInterval: 15)
-        XCTAssertEqual(resource.path, "/api/token")
-        XCTAssertEqual(resource.headers, ["Authorization" : "Basic Ym9vMTIzOnBhc3N3b3Jk",
+        let endpoint = SpotifyAPIRoutes.getAuthToken(clientID: "boo123", clientSecret: "password", timeoutInterval: 15)
+        XCTAssertEqual(endpoint.path, "/api/token")
+        XCTAssertEqual(endpoint.headers, ["Authorization" : "Basic Ym9vMTIzOnBhc3N3b3Jk",
                                           "Content-Type": "application/x-www-form-urlencoded"])
-        XCTAssertTrue(resource.queryParameters.isEmpty)
-        XCTAssertEqual(resource.bodyParameters, [URLQueryItem(name: "grant_type", value: "client_credentials")])
-        XCTAssertNil(resource.pageSizeQueryItem)
-        XCTAssertNil(resource.offsetQueryItem)
-        XCTAssertNil(resource.pageQueryItem)
-        XCTAssertNil(resource.cacheInterval)
-        XCTAssertEqual(resource.timeoutInterval, 15)
+        XCTAssertTrue(endpoint.queryParameters.isEmpty)
+        XCTAssertEqual(endpoint.bodyParameters, [URLQueryItem(name: "grant_type", value: "client_credentials")])
+        XCTAssertNil(endpoint.pageSizeQueryItem)
+        XCTAssertNil(endpoint.offsetQueryItem)
+        XCTAssertNil(endpoint.pageQueryItem)
+        XCTAssertNil(endpoint.cacheInterval)
+        XCTAssertEqual(endpoint.timeoutInterval, 15)
     }
 
     func testGetArtistTopTracks() {
         SpotifyAPIRoutes.accessToken = "NgCXRKMzYjw"
-        let resource = SpotifyAPIRoutes.getArtistTopTracks(withID: "Zqrs9326", cacheInterval: 3600, timeoutInterval: 30)
-        XCTAssertEqual(resource.path, "/artists/Zqrs9326/top-tracks")
-        XCTAssertEqual(resource.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
+        let endpoint = SpotifyAPIRoutes.getArtistTopTracks(withID: "Zqrs9326", cacheInterval: 3600, timeoutInterval: 30)
+        XCTAssertEqual(endpoint.path, "/artists/Zqrs9326/top-tracks")
+        XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
-        XCTAssertEqual(resource.queryParameters, [URLQueryItem(name: "market", value: "us")])
-        XCTAssertTrue(resource.bodyParameters.isEmpty)
-        XCTAssertNil(resource.pageSizeQueryItem)
-        XCTAssertNil(resource.offsetQueryItem)
-        XCTAssertNil(resource.pageQueryItem)
-        XCTAssertEqual(resource.cacheInterval, 3600)
-        XCTAssertEqual(resource.timeoutInterval, 30)
+        XCTAssertEqual(endpoint.queryParameters, [URLQueryItem(name: "market", value: "us")])
+        XCTAssertTrue(endpoint.bodyParameters.isEmpty)
+        XCTAssertNil(endpoint.pageSizeQueryItem)
+        XCTAssertNil(endpoint.offsetQueryItem)
+        XCTAssertNil(endpoint.pageQueryItem)
+        XCTAssertEqual(endpoint.cacheInterval, 3600)
+        XCTAssertEqual(endpoint.timeoutInterval, 30)
     }
 
     func testGetAlbum() {
         SpotifyAPIRoutes.accessToken = "NgCXRKMzYjw"
-        let resource = SpotifyAPIRoutes.getAlbum(withID: "Abcd1234", cacheInterval: 3600, timeoutInterval: 30)
-        XCTAssertEqual(resource.path, "/albums/Abcd1234")
-        XCTAssertEqual(resource.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
+        let endpoint = SpotifyAPIRoutes.getAlbum(withID: "Abcd1234", cacheInterval: 3600, timeoutInterval: 30)
+        XCTAssertEqual(endpoint.path, "/albums/Abcd1234")
+        XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
-        XCTAssertEqual(resource.queryParameters, [URLQueryItem(name: "market", value: "us")])
-        XCTAssertTrue(resource.bodyParameters.isEmpty)
-        XCTAssertNil(resource.pageSizeQueryItem)
-        XCTAssertNil(resource.offsetQueryItem)
-        XCTAssertNil(resource.pageQueryItem)
-        XCTAssertEqual(resource.cacheInterval, 3600)
-        XCTAssertEqual(resource.timeoutInterval, 30)
+        XCTAssertEqual(endpoint.queryParameters, [URLQueryItem(name: "market", value: "us")])
+        XCTAssertTrue(endpoint.bodyParameters.isEmpty)
+        XCTAssertNil(endpoint.pageSizeQueryItem)
+        XCTAssertNil(endpoint.offsetQueryItem)
+        XCTAssertNil(endpoint.pageQueryItem)
+        XCTAssertEqual(endpoint.cacheInterval, 3600)
+        XCTAssertEqual(endpoint.timeoutInterval, 30)
     }
 
     func testGetTrack() {
         SpotifyAPIRoutes.accessToken = "NgCXRKMzYjw"
-        let resource = SpotifyAPIRoutes.getTrack(withID: "Bcde2345", cacheInterval: 3600, timeoutInterval: 40)
-        XCTAssertEqual(resource.path, "/tracks/Bcde2345")
-        XCTAssertEqual(resource.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
+        let endpoint = SpotifyAPIRoutes.getTrack(withID: "Bcde2345", cacheInterval: 3600, timeoutInterval: 40)
+        XCTAssertEqual(endpoint.path, "/tracks/Bcde2345")
+        XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
-        XCTAssertEqual(resource.queryParameters, [URLQueryItem(name: "market", value: "us")])
-        XCTAssertTrue(resource.bodyParameters.isEmpty)
-        XCTAssertNil(resource.pageSizeQueryItem)
-        XCTAssertNil(resource.offsetQueryItem)
-        XCTAssertNil(resource.pageQueryItem)
-        XCTAssertEqual(resource.cacheInterval, 3600)
-        XCTAssertEqual(resource.timeoutInterval, 40)
+        XCTAssertEqual(endpoint.queryParameters, [URLQueryItem(name: "market", value: "us")])
+        XCTAssertTrue(endpoint.bodyParameters.isEmpty)
+        XCTAssertNil(endpoint.pageSizeQueryItem)
+        XCTAssertNil(endpoint.offsetQueryItem)
+        XCTAssertNil(endpoint.pageQueryItem)
+        XCTAssertEqual(endpoint.cacheInterval, 3600)
+        XCTAssertEqual(endpoint.timeoutInterval, 40)
     }
 
     func testSearch() {
         SpotifyAPIRoutes.accessToken = "NgCXRKMzYjw"
-        let resource = SpotifyAPIRoutes.search(withQuery: "upc: 1234", types: ["album"], resultLimit: 10, offset: 2, timeoutInterval: 50)
-        XCTAssertEqual(resource.path, "/search")
-        XCTAssertEqual(resource.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
+        let endpoint = SpotifyAPIRoutes.search(withQuery: "upc: 1234", types: ["album"], resultLimit: 10, offset: 2, timeoutInterval: 50)
+        XCTAssertEqual(endpoint.path, "/search")
+        XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
-        XCTAssertEqual(resource.queryParameters, [URLQueryItem(name: "q", value: "upc: 1234"),
+        XCTAssertEqual(endpoint.queryParameters, [URLQueryItem(name: "q", value: "upc: 1234"),
                                                   URLQueryItem(name: "type", value: "album"),
                                                   URLQueryItem(name: "market", value: "us")])
-        XCTAssertTrue(resource.bodyParameters.isEmpty)
-        XCTAssertEqual(resource.pageSizeQueryItem, URLQueryItem(name: "limit", value: "10"))
-        XCTAssertEqual(resource.offsetQueryItem, URLQueryItem(name: "offset", value: "2"))
-        XCTAssertNil(resource.pageQueryItem)
-        XCTAssertNil(resource.cacheInterval)
-        XCTAssertEqual(resource.timeoutInterval, 50)
+        XCTAssertTrue(endpoint.bodyParameters.isEmpty)
+        XCTAssertEqual(endpoint.pageSizeQueryItem, URLQueryItem(name: "limit", value: "10"))
+        XCTAssertEqual(endpoint.offsetQueryItem, URLQueryItem(name: "offset", value: "2"))
+        XCTAssertNil(endpoint.pageQueryItem)
+        XCTAssertNil(endpoint.cacheInterval)
+        XCTAssertEqual(endpoint.timeoutInterval, 50)
     }
 }
