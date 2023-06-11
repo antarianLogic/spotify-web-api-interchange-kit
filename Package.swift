@@ -1,12 +1,12 @@
-// swift-tools-version:5.7
+// swift-tools-version:5.9
 
 import PackageDescription
 
 let package = Package(
-    name: "SpotifyAPIKit",
+    name: "spotify-api-kit",
     platforms: [
-        .iOS(.v16),
-        .macOS(.v13)
+        .iOS(.v17),
+        .macOS(.v14)
     ],
     products: [
         .library(
@@ -14,8 +14,8 @@ let package = Package(
             targets: ["SpotifyAPIKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/antarianLogic/rest-web-service", from: "0.5.5"),
-        .package(url: "https://github.com/antarianLogic/json-utils", from: "0.2.0")
+        .package(url: "https://github.com/antarianLogic/rest-web-service", from: "0.6.0"),
+        .package(url: "https://github.com/antarianLogic/json-utils", from: "0.3.0")
     ],
     targets: [
         .target(
