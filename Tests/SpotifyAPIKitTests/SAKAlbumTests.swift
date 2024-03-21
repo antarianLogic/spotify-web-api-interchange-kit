@@ -62,5 +62,7 @@ final class SAKAlbumTests: XCTestCase {
         XCTAssertEqual(lastTrackArtistStub.id, "6olE6TJLqED3rqDCT0FyPh")
         XCTAssertEqual(lastTrackArtistStub.uri, "spotify:artist:6olE6TJLqED3rqDCT0FyPh")
         XCTAssertEqual(lastTrackArtistStub.name, "Nirvana")
+        XCTAssertEqual(album.externalIDs?.upc, "00602527854090")
+        XCTAssertNil(album.externalIDs?.isrc)
     }
 }

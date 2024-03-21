@@ -30,6 +30,8 @@ public struct SAKAlbum: Codable, Identifiable, Equatable {
 
     public let tracks: SAKCollection<SAKTrackStub>
 
+    public let externalIDs: SAKExternalIDs?
+
     enum CodingKeys: String, CodingKey {
         case id
         case uri
@@ -41,6 +43,7 @@ public struct SAKAlbum: Codable, Identifiable, Equatable {
         case images
         case artists
         case tracks
+        case externalIDs = "external_ids"
     }
 
     public init(id: String,
@@ -52,7 +55,8 @@ public struct SAKAlbum: Codable, Identifiable, Equatable {
                 popularity: Int,
                 images: [SAKImage],
                 artists: [SAKArtistStub],
-                tracks: SAKCollection<SAKTrackStub>) {
+                tracks: SAKCollection<SAKTrackStub>,
+                externalIDs: SAKExternalIDs?) {
         self.id = id
         self.uri = uri
         self.name = name
@@ -63,5 +67,6 @@ public struct SAKAlbum: Codable, Identifiable, Equatable {
         self.images = images
         self.artists = artists
         self.tracks = tracks
+        self.externalIDs = externalIDs
     }
 }
