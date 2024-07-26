@@ -8,7 +8,7 @@
 
 import RESTWebService
 
-public struct SAKCollection<SpObj>: Codable, Equatable where SpObj: Codable & Identifiable & Equatable {
+public struct SAKCollection<SpObj>: Codable, Equatable, Sendable where SpObj: Codable & Identifiable & Equatable & Sendable {
 
     public let total: Int
 

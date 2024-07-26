@@ -8,7 +8,7 @@
 
 import RESTWebService
 
-public struct SAKImage: Codable, Equatable {
+public struct SAKImage: Codable, Equatable, Sendable {
 
     public let url: String
 

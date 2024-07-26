@@ -11,8 +11,6 @@ import RESTWebService
 
 public enum SpotifyAPIRoutes {
 
-    public static var accessToken: String?
-
     public static let baseURL: URL = {
         guard let url = URL(string: "https://api.spotify.com/v1") else { fatalError("Invalid base URL!") }
 
@@ -40,30 +38,33 @@ public enum SpotifyAPIRoutes {
     }
 
     public static func getArtistTopTracks(withID id: String,
+                                          accessToken: String,
                                           cacheInterval: TimeInterval? = nil,
                                           timeoutInterval: TimeInterval? = nil) -> RESTEndpoint {
         return RESTEndpoint(path: "/artists/\(id)/top-tracks",
-                            headers: headers,
+                            headers: headers(withAccessToken: accessToken),
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
                             cacheInterval: cacheInterval,
                             timeoutInterval: timeoutInterval)
     }
 
     public static func getAlbum(withID id: String,
+                                accessToken: String,
                                 cacheInterval: TimeInterval? = nil,
                                 timeoutInterval: TimeInterval? = nil) -> RESTEndpoint {
         return RESTEndpoint(path: "/albums/\(id)",
-                            headers: headers,
+                            headers: headers(withAccessToken: accessToken),
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
                             cacheInterval: cacheInterval,
                             timeoutInterval: timeoutInterval)
     }
 
     public static func getTrack(withID id: String,
+                                accessToken: String,
                                 cacheInterval: TimeInterval? = nil,
                                 timeoutInterval: TimeInterval? = nil) -> RESTEndpoint {
         return RESTEndpoint(path: "/tracks/\(id)",
-                            headers: headers,
+                            headers: headers(withAccessToken: accessToken),
                             queryParameters: [URLQueryItem(name: "market", value: "us")],
                             cacheInterval: cacheInterval,
                             timeoutInterval: timeoutInterval)
@@ -73,10 +74,11 @@ public enum SpotifyAPIRoutes {
                               types: [String],
                               resultLimit: UInt = 100,
                               offset: UInt = 0,
+                              accessToken: String,
                               timeoutInterval: TimeInterval? = nil) -> RESTEndpoint {
         let typesString = types.joined(separator: ",")
         return RESTEndpoint(path: "/search",
-                            headers: headers,
+                            headers: headers(withAccessToken: accessToken),
                             queryParameters: [URLQueryItem(name: "q", value: query),
                                               URLQueryItem(name: "type", value: typesString),
                                               URLQueryItem(name: "market", value: "us")],
@@ -85,11 +87,10 @@ public enum SpotifyAPIRoutes {
                             timeoutInterval: timeoutInterval)
     }
 
-    private static var headers: [String : String] {
+    private static func headers(withAccessToken accessToken: String) -> [String : String] {
         var allHeaders: [String : String] = [:]
-        if let token = Self.accessToken,
-           !token.isEmpty {
-            allHeaders["Authorization"] = "Bearer \(token)"
+        if !accessToken.isEmpty {
+            allHeaders["Authorization"] = "Bearer \(accessToken)"
         }
         allHeaders["Content-Type"] = "application/json"
         return allHeaders

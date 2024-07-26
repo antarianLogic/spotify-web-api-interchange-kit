@@ -8,7 +8,7 @@
 
 import RESTWebService
 
-public struct ClientCredsResponse: Codable, Equatable {
+public struct ClientCredsResponse: Codable, Equatable, Sendable {
 
     public let accessToken: String
 

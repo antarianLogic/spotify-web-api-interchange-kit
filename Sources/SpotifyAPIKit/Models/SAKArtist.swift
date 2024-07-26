@@ -8,7 +8,7 @@
 
 import RESTWebService
 
-public struct SAKArtist: Codable, Identifiable, Equatable {
+public struct SAKArtist: Codable, Identifiable, Equatable, Sendable {
 
     public let id: String
 
