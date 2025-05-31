@@ -13,7 +13,7 @@ let package = Package(
                  targets: ["SpotifyAPIKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/antarianLogic/rest-web-service", from: "0.6.4"),
+        .package(url: "https://github.com/antarianLogic/rest-web-service", from: "0.6.8"),
         .package(url: "https://github.com/antarianLogic/json-utils", from: "0.4.0")
     ],
     targets: [

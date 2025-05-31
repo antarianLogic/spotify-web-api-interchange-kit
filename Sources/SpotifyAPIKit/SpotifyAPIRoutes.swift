@@ -30,10 +30,12 @@ public enum SpotifyAPIRoutes {
         let encodedValue = Data(idAndSecret.utf8).base64EncodedString()
         let authHeaders: [String : String] = ["Content-Type" : "application/x-www-form-urlencoded",
                                               "Authorization" : "Basic \(encodedValue)"]
+        var bodyComponents = URLComponents()
+        bodyComponents.queryItems = [URLQueryItem(name: "grant_type", value: "client_credentials")]
         return RESTEndpoint(method: .post,
                             path: "/api/token",
                             headers: authHeaders,
-                            bodyParameters: [URLQueryItem(name: "grant_type", value: "client_credentials")],
+                            body: bodyComponents.query,
                             timeoutInterval: timeoutInterval)
     }
 

@@ -29,7 +29,7 @@ final class SpotifyAPIRoutesTests: XCTestCase {
         XCTAssertEqual(endpoint.headers, ["Authorization" : "Basic Ym9vMTIzOnBhc3N3b3Jk",
                                           "Content-Type": "application/x-www-form-urlencoded"])
         XCTAssertTrue(endpoint.queryParameters.isEmpty)
-        XCTAssertEqual(endpoint.bodyParameters, [URLQueryItem(name: "grant_type", value: "client_credentials")])
+        XCTAssertEqual(endpoint.body, "grant_type=client_credentials")
         XCTAssertNil(endpoint.pageSizeQueryItem)
         XCTAssertNil(endpoint.offsetQueryItem)
         XCTAssertNil(endpoint.pageQueryItem)
@@ -44,7 +44,7 @@ final class SpotifyAPIRoutesTests: XCTestCase {
         XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
         XCTAssertEqual(endpoint.queryParameters, [URLQueryItem(name: "market", value: "us")])
-        XCTAssertTrue(endpoint.bodyParameters.isEmpty)
+        XCTAssertNil(endpoint.body)
         XCTAssertNil(endpoint.pageSizeQueryItem)
         XCTAssertNil(endpoint.offsetQueryItem)
         XCTAssertNil(endpoint.pageQueryItem)
@@ -59,7 +59,7 @@ final class SpotifyAPIRoutesTests: XCTestCase {
         XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
         XCTAssertEqual(endpoint.queryParameters, [URLQueryItem(name: "market", value: "us")])
-        XCTAssertTrue(endpoint.bodyParameters.isEmpty)
+        XCTAssertNil(endpoint.body)
         XCTAssertNil(endpoint.pageSizeQueryItem)
         XCTAssertNil(endpoint.offsetQueryItem)
         XCTAssertNil(endpoint.pageQueryItem)
@@ -74,7 +74,7 @@ final class SpotifyAPIRoutesTests: XCTestCase {
         XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
         XCTAssertEqual(endpoint.queryParameters, [URLQueryItem(name: "market", value: "us")])
-        XCTAssertTrue(endpoint.bodyParameters.isEmpty)
+        XCTAssertNil(endpoint.body)
         XCTAssertNil(endpoint.pageSizeQueryItem)
         XCTAssertNil(endpoint.offsetQueryItem)
         XCTAssertNil(endpoint.pageQueryItem)
@@ -91,7 +91,7 @@ final class SpotifyAPIRoutesTests: XCTestCase {
         XCTAssertEqual(endpoint.queryParameters, [URLQueryItem(name: "q", value: "upc: 1234"),
                                                   URLQueryItem(name: "type", value: "album"),
                                                   URLQueryItem(name: "market", value: "us")])
-        XCTAssertTrue(endpoint.bodyParameters.isEmpty)
+        XCTAssertNil(endpoint.body)
         XCTAssertEqual(endpoint.pageSizeQueryItem, URLQueryItem(name: "limit", value: "10"))
         XCTAssertEqual(endpoint.offsetQueryItem, URLQueryItem(name: "offset", value: "2"))
         XCTAssertNil(endpoint.pageQueryItem)
