@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RESTWebService
+import Interchange
 
 public enum SpotifyAPIRoutes {
 

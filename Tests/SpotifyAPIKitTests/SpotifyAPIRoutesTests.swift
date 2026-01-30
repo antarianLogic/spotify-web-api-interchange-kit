@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import RESTWebService
+import Interchange
 @testable import SpotifyAPIKit
 
 final class SpotifyAPIRoutesTests: XCTestCase {

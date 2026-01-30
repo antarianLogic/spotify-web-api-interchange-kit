@@ -6,7 +6,7 @@
 //  Copyright © 2024 Antarian Logic LLC. All rights reserved.
 //
 
-import RESTWebService
+import Interchange
 
 public struct SAKExternalIDs: Codable, Equatable, Sendable {
 

@@ -13,12 +13,12 @@ let package = Package(
                  targets: ["SpotifyAPIKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/antarianLogic/rest-web-service", from: "1.0.0"),
+        .package(url: "https://github.com/antarianLogic/interchange", from: "1.0.3"),
         .package(url: "https://github.com/antarianLogic/json-utils", from: "1.0.0")
     ],
     targets: [
         .target(name: "SpotifyAPIKit",
-                dependencies: [.product(name: "RESTWebService", package: "rest-web-service"),
+                dependencies: [.product(name: "Interchange", package: "interchange"),
                                .product(name: "JSONUtils", package: "json-utils")],
                 resources: [.copy("DataPresets/JSON")]),
         .testTarget(name: "SpotifyAPIKitTests",

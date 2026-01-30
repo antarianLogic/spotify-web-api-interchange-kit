@@ -6,7 +6,7 @@
 //  Copyright © 2022 Antarian Logic LLC. All rights reserved.
 //
 
-import RESTWebService
+import Interchange
 
 public struct SAKArtistStub: Codable, Identifiable, Equatable, Sendable {
 
