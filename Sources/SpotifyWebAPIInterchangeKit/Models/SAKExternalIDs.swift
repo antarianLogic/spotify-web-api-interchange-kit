@@ -1,6 +1,6 @@
 //
 //  SAKExternalIDs.swift
-//  SpotifyAPIKit
+//  SpotifyWebAPIInterchangeKit
 //
 //  Created by Carl Sheppard on 3/20/24.
 //  Copyright © 2024 Antarian Logic LLC. All rights reserved.

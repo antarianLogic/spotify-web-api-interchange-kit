@@ -1,6 +1,6 @@
 //
 //  SAKAlbumStub.swift
-//  SpotifyAPIKit
+//  SpotifyWebAPIInterchangeKit
 //
 //  Created by Carl Sheppard on 2/9/22.
 //  Copyright © 2022 Antarian Logic LLC. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  SAKImage.swift
-//  SpotifyAPIKit
+//  SpotifyWebAPIInterchangeKit
 //
 //  Created by Carl Sheppard on 2/3/22.
 //  Copyright © 2022 Antarian Logic LLC. All rights reserved.

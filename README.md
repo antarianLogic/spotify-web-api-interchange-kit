@@ -1,3 +1,3 @@
-# SpotifyAPIKit
+# SpotifyWebAPIInterchangeKit
 
 ## Swift package for interaction with the Spotify Web API.

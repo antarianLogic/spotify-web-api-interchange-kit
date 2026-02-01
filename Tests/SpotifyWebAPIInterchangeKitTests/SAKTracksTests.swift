@@ -1,13 +1,13 @@
 //
 //  SAKTracksTests.swift
-//  SpotifyAPIKitTests
+//  SpotifyWebAPIInterchangeKitTests
 //
 //  Created by Carl Sheppard on 11/14/22.
 //  Copyright © 2022 Antarian Logic LLC. All rights reserved.
 //
 
 import XCTest
-@testable import SpotifyAPIKit
+@testable import SpotifyWebAPIInterchangeKit
 
 final class SAKTracksTests: XCTestCase {
 

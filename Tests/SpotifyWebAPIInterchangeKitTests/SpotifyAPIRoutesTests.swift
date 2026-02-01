@@ -1,6 +1,6 @@
 //
-//  SpotifyAPIRoutesTests.swift
-//  SpotifyAPIKitTests
+//  SpotifyWebAPIRoutesTests.swift
+//  SpotifyWebAPIInterchangeKitTests
 //
 //  Created by Carl Sheppard on 2/3/22.
 //  Copyright © 2022 Antarian Logic LLC. All rights reserved.
@@ -8,22 +8,22 @@
 
 import XCTest
 import Interchange
-@testable import SpotifyAPIKit
+@testable import SpotifyWebAPIInterchangeKit
 
-final class SpotifyAPIRoutesTests: XCTestCase {
+final class SpotifyWebAPIRoutesTests: XCTestCase {
 
     func testHeaders() {
-        let endpoint = SpotifyAPIRoutes.getAlbum(withID: "1234", accessToken: "NgCXRKMzYjw")
+        let endpoint = SpotifyWebAPIRoutes.getAlbum(withID: "1234", accessToken: "NgCXRKMzYjw")
         XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
                                           "Content-Type": "application/json"])
     }
 
     func testBaseURL() {
-        XCTAssertEqual(SpotifyAPIRoutes.baseURL.absoluteString, "https://api.spotify.com/v1")
+        XCTAssertEqual(SpotifyWebAPIRoutes.baseURL.absoluteString, "https://api.spotify.com/v1")
     }
 
     func testGetAuthToken() {
-        let endpoint = SpotifyAPIRoutes.getAuthToken(clientID: "boo123", clientSecret: "password",
+        let endpoint = SpotifyWebAPIRoutes.getAuthToken(clientID: "boo123", clientSecret: "password",
                                                      timeoutInterval: 15)
         XCTAssertEqual(endpoint.path, "/api/token")
         XCTAssertEqual(endpoint.headers, ["Authorization" : "Basic Ym9vMTIzOnBhc3N3b3Jk",
@@ -38,7 +38,7 @@ final class SpotifyAPIRoutesTests: XCTestCase {
     }
 
     func testGetArtistTopTracks() {
-        let endpoint = SpotifyAPIRoutes.getArtistTopTracks(withID: "Zqrs9326", accessToken: "NgCXRKMzYjw",
+        let endpoint = SpotifyWebAPIRoutes.getArtistTopTracks(withID: "Zqrs9326", accessToken: "NgCXRKMzYjw",
                                                            cacheInterval: 3600, timeoutInterval: 30)
         XCTAssertEqual(endpoint.path, "/artists/Zqrs9326/top-tracks")
         XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
@@ -53,7 +53,7 @@ final class SpotifyAPIRoutesTests: XCTestCase {
     }
 
     func testGetAlbum() {
-        let endpoint = SpotifyAPIRoutes.getAlbum(withID: "Abcd1234", accessToken: "NgCXRKMzYjw",
+        let endpoint = SpotifyWebAPIRoutes.getAlbum(withID: "Abcd1234", accessToken: "NgCXRKMzYjw",
                                                  cacheInterval: 3600, timeoutInterval: 30)
         XCTAssertEqual(endpoint.path, "/albums/Abcd1234")
         XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
@@ -68,7 +68,7 @@ final class SpotifyAPIRoutesTests: XCTestCase {
     }
 
     func testGetTrack() {
-        let endpoint = SpotifyAPIRoutes.getTrack(withID: "Bcde2345", accessToken: "NgCXRKMzYjw",
+        let endpoint = SpotifyWebAPIRoutes.getTrack(withID: "Bcde2345", accessToken: "NgCXRKMzYjw",
                                                  cacheInterval: 3600, timeoutInterval: 40)
         XCTAssertEqual(endpoint.path, "/tracks/Bcde2345")
         XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",
@@ -83,7 +83,7 @@ final class SpotifyAPIRoutesTests: XCTestCase {
     }
 
     func testSearch() {
-        let endpoint = SpotifyAPIRoutes.search(withQuery: "upc: 1234", types: ["album"], resultLimit: 10, offset: 2,
+        let endpoint = SpotifyWebAPIRoutes.search(withQuery: "upc: 1234", types: ["album"], resultLimit: 10, offset: 2,
                                                accessToken: "NgCXRKMzYjw", timeoutInterval: 50)
         XCTAssertEqual(endpoint.path, "/search")
         XCTAssertEqual(endpoint.headers, ["Authorization" : "Bearer NgCXRKMzYjw",

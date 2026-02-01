@@ -3,25 +3,25 @@
 import PackageDescription
 
 let package = Package(
-    name: "spotify-api-kit",
+    name: "spotify-web-api-interchange-kit",
     platforms: [
         .iOS(.v15),
         .macOS(.v12)
     ],
     products: [
-        .library(name: "SpotifyAPIKit",
-                 targets: ["SpotifyAPIKit"]),
+        .library(name: "SpotifyWebAPIInterchangeKit",
+                 targets: ["SpotifyWebAPIInterchangeKit"]),
     ],
     dependencies: [
         .package(url: "https://github.com/antarianLogic/interchange", from: "1.0.4"),
         .package(url: "https://github.com/antarianLogic/json-utils", from: "1.0.0")
     ],
     targets: [
-        .target(name: "SpotifyAPIKit",
+        .target(name: "SpotifyWebAPIInterchangeKit",
                 dependencies: [.product(name: "Interchange", package: "interchange"),
                                .product(name: "JSONUtils", package: "json-utils")],
                 resources: [.copy("DataPresets/JSON")]),
-        .testTarget(name: "SpotifyAPIKitTests",
-                    dependencies: ["SpotifyAPIKit"]),
+        .testTarget(name: "SpotifyWebAPIInterchangeKitTests",
+                    dependencies: ["SpotifyWebAPIInterchangeKit"]),
     ]
 )

@@ -1,6 +1,6 @@
 //
-//  SpotifyAPIRoutes.swift
-//  SpotifyAPIKit
+//  SpotifyWebAPIRoutes.swift
+//  SpotifyWebAPIInterchangeKit
 //
 //  Created by Carl Sheppard on 2/3/22.
 //  Copyright © 2022 Antarian Logic LLC. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 import Interchange
 
-public enum SpotifyAPIRoutes {
+public enum SpotifyWebAPIRoutes {
 
     public static let baseURL: URL = {
         guard let url = URL(string: "https://api.spotify.com/v1") else { fatalError("Invalid base URL!") }
