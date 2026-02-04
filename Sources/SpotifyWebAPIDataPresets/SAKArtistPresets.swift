@@ -1,13 +1,13 @@
 //
 //  SAKArtistPresets.swift
-//  SpotifyWebAPIInterchangeKit
+//  SpotifyWebAPIDataPresets
 //
 //  Created by Carl Sheppard on 2/8/22.
 //  Copyright © 2022 Antarian Logic LLC. All rights reserved.
 //
 
 import Foundation
-import JSONUtils
+import SpotifyWebAPIInterchangeKit
 
 public extension SAKArtist {
 

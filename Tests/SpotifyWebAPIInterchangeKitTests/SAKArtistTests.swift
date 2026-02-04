@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import SpotifyWebAPIInterchangeKit
+import SpotifyWebAPIDataPresets
 
 final class SAKArtistTests: XCTestCase {
 
