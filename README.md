@@ -20,6 +20,9 @@
 This package contains a collection of Spotify Web API endpoint specifications in the form of `RESTEndpoint` structs to be used with [Interchange](https://github.com/antarianLogic/interchange).
 It also contains the `Codable` model types to be returned by `InterchangeManager`s generic `sendRequest` function when using the corresponding `RESTEndpoint` struct.
 For each endpoint specification, there is a convenience static function in `SpotifyWebAPIRoutes` that returns a fully-populated `RESTEndpoint` struct.
+Finally, a worker/manager is provided called `SpotifyWebAPIWorker` that ties it all together by handling authorization internally and providing convenience functions for each supported API call.
+
+Consumers of this package may either simply use the high-level `SpotifyWebAPIWorker` for ease of use or chose to use the lower-level `SpotifyWebAPIRoutes` functions for more control with a separate `InterchangeManager` for authorization and API calls, and using `sendRequest` to make the actual service calls.
 
 Current Spotify Web API endpoints supported are:
 
@@ -38,6 +41,10 @@ However, there is no reason why it couldn't be used in production apps and other
 ## Examples
 
 ### Authorization
+
+If the `SpotifyWebAPIWorker` is used, authorization is handled automatically but the Spotify client ID and client secret must be passed during initialization.
+
+To handle authorization a bit more manually, use the `getAuthToken` of `SpotifyWebAPIRoutes` as demonstrated below.
 
 ```swift
     let authManager = InterchangeManager(baseURL: SpotifyWebAPIRoutes.authBaseURL)
@@ -72,6 +79,39 @@ However, there is no reason why it couldn't be used in production apps and other
 ```
 
 ### Album Search by UPC and Album Details
+
+With `SpotifyWebAPIWorker`, it's as easy as this:
+
+```swift
+    let worker = SpotifyWebAPIWorker(clientID: "YOUR_CLIENT_ID",
+                                     clientSecret: "YOUR_CLIENT_SECRET")
+    // ...
+    do {
+        // get albums with UPC
+        let albums = try await worker.searchAlbums(withUPC: "SOME_ALBUM_UPC")
+
+        guard let firstAlbum = albums.first else {
+            // This shouldn't happen because searchAlbums would have thrown an exception if the array was empty.
+            // We have a guard anyway to appease the compiler and to avoid having an explicitly wrapped optional.
+            print("Error: searchAlbum returned empty array")
+            return
+        }
+
+        print("Album name: \(firstAlbum.name)")
+        print("Spotify album ID: \(firstAlbum.id)")
+
+        // get album details
+        let album = try await worker.getAlbum(withID: firstAlbum.id)
+
+        print("Album release date: \(album.releaseDate)")
+        print("Album track count: \(album.totalTracks)")
+        print("Album artwork URLs: \(album.images.map { $0.url })")
+    } catch {
+        print("Search error: \(error.localizedDescription)")
+    }
+```
+
+For the manual approach, here is an example:
 
 ```swift
     let apiManager = InterchangeManager(baseURL: SpotifyWebAPIRoutes.baseURL)
@@ -151,6 +191,38 @@ However, there is no reason why it couldn't be used in production apps and other
 ```
 
 ### Top Tracks for Artist and Track Details
+
+Here is an example with `SpotifyWebAPIWorker`:
+
+```swift
+    let worker = SpotifyWebAPIWorker(clientID: "YOUR_CLIENT_ID",
+                                     clientSecret: "YOUR_CLIENT_SECRET")
+    // ...
+    do {
+        // Make Spotify top tracks call with a known artist ID...
+        let tracks = try await worker.getTopTracksForArtist(withID: "SOME_ARTIST_ID")
+
+        guard let firstTrack = tracks.first else {
+            // This shouldn't happen because getTopTracksForArtist would have thrown an exception if the array was empty.
+            // We have a guard anyway to appease the compiler and to avoid having an explicitly wrapped optional.
+            print("Error: getTopTracksForArtist returned empty array")
+            return
+        }
+
+        print("Track name: \(firstTrack.name)")
+        print("Spotify track ID: \(firstTrack.id)")
+
+        // Now make Spotify track lookup call for Spotify ID...
+        let track = try await worker.getTrack(withID: firstTrack.id)
+
+        print("Track duration (ms): \(track.durationMS)")
+        print("Track preview URL: \(track.previewURL ?? "none")")
+    } catch {
+        print("Search error: \(error.localizedDescription)")
+    }
+```
+
+Here is an example of the manual approach:
 
 ```swift
     let apiManager = InterchangeManager(baseURL: SpotifyWebAPIRoutes.baseURL)
