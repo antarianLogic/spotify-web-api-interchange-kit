@@ -20,7 +20,7 @@ public actor SpotifyWebAPIWorker {
     ///
     public init(clientID: String,
                 clientSecret: String,
-                alternateAuthManager: InterchangeManaging = InterchangeManager(baseURL: SpotifyWebAPIRoutes.authBaseURL),
+                alternateAuthManager: InterchangeManaging = InterchangeManager(baseURL: SpotifyWebAuthRoutes.baseURL),
                 alternateAPIManager: InterchangeManaging = InterchangeManager(baseURL: SpotifyWebAPIRoutes.baseURL)) {
         self.clientID = clientID
         self.clientSecret = clientSecret
@@ -43,7 +43,7 @@ public actor SpotifyWebAPIWorker {
         // First check Spotify authorization...
         guard try await checkAuth(),
               let accessToken else {
-            throw SpotifyWebAPIError.nilAccessToken
+            throw SpotifyWebAuthError.nilAccessToken
         }
         // Now make web API request...
         let endpoint = SpotifyWebAPIRoutes.getArtistTopTracks(withID: artistID,
@@ -66,7 +66,7 @@ public actor SpotifyWebAPIWorker {
         // First check Spotify authorization...
         guard try await checkAuth(),
               let accessToken else {
-            throw SpotifyWebAPIError.nilAccessToken
+            throw SpotifyWebAuthError.nilAccessToken
         }
         // Now make web API request...
         let endpoint = SpotifyWebAPIRoutes.getAlbum(withID: albumID,
@@ -85,7 +85,7 @@ public actor SpotifyWebAPIWorker {
         // First check Spotify authorization...
         guard try await checkAuth(),
               let accessToken else {
-            throw SpotifyWebAPIError.nilAccessToken
+            throw SpotifyWebAuthError.nilAccessToken
         }
         // Now make web API request...
         let endpoint = SpotifyWebAPIRoutes.getTrack(withID: trackID,
@@ -104,7 +104,7 @@ public actor SpotifyWebAPIWorker {
         // First check Spotify authorization...
         guard try await checkAuth(),
               let accessToken else {
-            throw SpotifyWebAPIError.nilAccessToken
+            throw SpotifyWebAuthError.nilAccessToken
         }
         // Now make web API request...
         let queryString = "upc:\(albumUPC)"
@@ -130,7 +130,7 @@ public actor SpotifyWebAPIWorker {
         // First check Spotify authorization...
         guard try await checkAuth(),
               let accessToken else {
-            throw SpotifyWebAPIError.nilAccessToken
+            throw SpotifyWebAuthError.nilAccessToken
         }
         // Now make web API request...
         let queryString = "artist:\(artistName)"
@@ -158,7 +158,7 @@ public actor SpotifyWebAPIWorker {
         // First check Spotify authorization...
         guard try await checkAuth(),
               let accessToken else {
-            throw SpotifyWebAPIError.nilAccessToken
+            throw SpotifyWebAuthError.nilAccessToken
         }
         // Now make web API request...
         let queryString = "album:\"\(albumTitle)\" artist:\"\(artistName)\""
@@ -186,12 +186,12 @@ public actor SpotifyWebAPIWorker {
     private func authorize() async throws {
         guard accessToken == nil else { return }
 
-        let endpoint = SpotifyWebAPIRoutes.getAuthToken(clientID: clientID,
-                                                        clientSecret: clientSecret)
+        let endpoint = SpotifyWebAuthRoutes.getAuthToken(clientID: clientID,
+                                                         clientSecret: clientSecret)
         let clientCreds: ClientCredsResponse = try await authManager.sendRequest(with: endpoint)
 
         guard clientCreds.tokenType.lowercased() == "bearer" else {
-            throw SpotifyWebAPIError.unexpectedTokenType(clientCreds.tokenType)
+            throw SpotifyWebAuthError.unexpectedTokenType(clientCreds.tokenType)
         }
 
         accessToken = clientCreds.accessToken

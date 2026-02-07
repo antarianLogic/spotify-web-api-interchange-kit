@@ -24,11 +24,16 @@ Finally, a worker/manager is provided called `SpotifyWebAPIWorker` that ties it 
 
 Consumers of this package may either simply use the high-level `SpotifyWebAPIWorker` for ease of use or chose to use the lower-level `SpotifyWebAPIRoutes` functions for more control with a separate `InterchangeManager` for authorization and API calls, and using `sendRequest` to make the actual service calls.
 
+Current Spotify Web Authorization endpoints supported are:
+
+| Path                     | `SpotifyWebAuthRoutes` method | `sendRequest` return type |
+| ------------------------ | ----------------------------- | ------------------------- |
+| /api/token               | `getAuthToken`                | `ClientCredsResponse`     |
+
 Current Spotify Web API endpoints supported are:
 
 | Path                     | `SpotifyWebAPIRoutes` method | `sendRequest` return type |
 | ------------------------ | ---------------------------- | ------------------------- |
-| /api/token               | `getAuthToken`               | `ClientCredsResponse`     |
 | /artists/{id}/top-tracks | `getArtistTopTracks`         | `SAKTracks`               |
 | /albums/{id}             | `getAlbum`                   | `SAKAlbum`                |
 | /tracks/{id}             | `getTrack`                   | `SAKTrack`                |
@@ -44,10 +49,10 @@ However, there is no reason why it couldn't be used in production apps and other
 
 If the `SpotifyWebAPIWorker` is used, authorization is handled automatically but the Spotify client ID and client secret must be passed during initialization.
 
-To handle authorization a bit more manually, use the `getAuthToken` of `SpotifyWebAPIRoutes` as demonstrated below.
+To handle authorization a bit more manually, use the `getAuthToken` of `SpotifyWebAuthRoutes` as demonstrated below.
 
 ```swift
-    let authManager = InterchangeManager(baseURL: SpotifyWebAPIRoutes.authBaseURL)
+    let authManager = InterchangeManager(baseURL: SpotifyWebAuthRoutes.baseURL)
 
     var accessToken: String?
 
@@ -62,8 +67,8 @@ To handle authorization a bit more manually, use the `getAuthToken` of `SpotifyW
     func authorize() async {
         guard accessToken == nil else { return }
 
-        let endpoint = SpotifyWebAPIRoutes.getAuthToken(clientID: "YOUR_CLIENT_ID",
-                                                        clientSecret: "YOUR_CLIENT_SECRET")
+        let endpoint = SpotifyWebAuthRoutes.getAuthToken(clientID: "YOUR_CLIENT_ID",
+                                                         clientSecret: "YOUR_CLIENT_SECRET")
         do {
             let clientCreds: ClientCredsResponse = try await authManager.sendRequest(with: endpoint)
 

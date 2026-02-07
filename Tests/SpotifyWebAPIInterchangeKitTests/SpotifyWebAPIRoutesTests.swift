@@ -18,25 +18,6 @@ final class SpotifyWebAPIRoutesTests: XCTestCase {
                                           "Content-Type": "application/json"])
     }
 
-    func testBaseURL() {
-        XCTAssertEqual(SpotifyWebAPIRoutes.baseURL.absoluteString, "https://api.spotify.com/v1")
-    }
-
-    func testGetAuthToken() {
-        let endpoint = SpotifyWebAPIRoutes.getAuthToken(clientID: "boo123", clientSecret: "password",
-                                                     timeoutInterval: 15)
-        XCTAssertEqual(endpoint.path, "/api/token")
-        XCTAssertEqual(endpoint.headers, ["Authorization" : "Basic Ym9vMTIzOnBhc3N3b3Jk",
-                                          "Content-Type": "application/x-www-form-urlencoded"])
-        XCTAssertTrue(endpoint.queryParameters.isEmpty)
-        XCTAssertEqual(endpoint.body, "grant_type=client_credentials")
-        XCTAssertNil(endpoint.pageSizeQueryItem)
-        XCTAssertNil(endpoint.offsetQueryItem)
-        XCTAssertNil(endpoint.pageQueryItem)
-        XCTAssertNil(endpoint.cacheInterval)
-        XCTAssertEqual(endpoint.timeoutInterval, 15)
-    }
-
     func testGetArtistTopTracks() {
         let endpoint = SpotifyWebAPIRoutes.getArtistTopTracks(withID: "Zqrs9326", accessToken: "NgCXRKMzYjw",
                                                            cacheInterval: 3600, timeoutInterval: 30)

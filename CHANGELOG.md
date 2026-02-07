@@ -5,28 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.6] - 2026-02-07
 
 ### Added
-- `SpotifyWebAPIWorker.swift`
-- `SpotifyWebAPIError.swift`
-- `ClientCredsResponsePresets.swift`
-- `SpotifyWebAPIWorkerTests.swift`
+- `SpotifyWebAPIWorker.swift` - new top-level interface to provide convenience functions and manage authorization
+- `SpotifyWebAPIError.swift` - for API errors specific to this package
+- `ClientCredsResponsePresets.swift` - auth. response presets for testing
+- `SpotifyWebAPIWorkerTests.swift` - tests for the new `SpotifyWebAPIWorker`
+- `SpotifyWebAuthRoutes.swift` - moved auth. related things here from `SpotifyWebAPIRoutes`
+- `SpotifyWebAuthError.swift` - for auth. errors specific to this package
+- `SpotifyWebAuthRoutesTests.swift` - moved auth. related tests here from `SpotifyWebAPIRoutesTests`
 
 ### Changed
-- `README.md`
-
-### Deprecated
-TBD
-
-### Removed
-TBD
-
-### Fixed
-TBD
-
-### Security
-TBD
+- `README.md` - documentation and examples for the new `SpotifyWebAPIWorker` and other updates
+- `SpotifyWebAPIRoutes.swift` - moved out auth. related things to `SpotifyWebAuthRoutes`
+- `SpotifyWebAPIRoutesTests.swift` - moved out auth. related tests to `SpotifyWebAuthRoutesTests`
+- Moved things around in the Xcode project to separate the auth. stuff from the regular API stuff
 
 ## [1.0.5] - 2026-02-04
 
@@ -34,7 +28,7 @@ TBD
 - `JSONDecoderHelpers.swift`, absorbed code from dependency on private repo that has been removed
 
 ### Changed
-- Moved data presets into their own product separate from the main SpotifyWebAPIInterchangeKit product
+- Moved data presets into their own product separate from the main `SpotifyWebAPIInterchangeKit` product
 
 ### Removed
 - dependency on private repo
@@ -56,12 +50,12 @@ TBD
 ## [1.0.2] - 2026-01-31
 
 ### Changed
-- Bumped version on interchange dependency
+- Bumped version on `Interchange` dependency
 
 ## [1.0.1] - 2026-01-29
 
 ### Changed
-- Now referencing RESTWebService's new name, Interchange
+- Now referencing RESTWebService's new name, `Interchange`
 
 ## [1.0.0] - 2025-07-07
 
